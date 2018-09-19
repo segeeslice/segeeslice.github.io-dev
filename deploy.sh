@@ -12,7 +12,7 @@ cd dist
 
 git init
 git add -A
-git commit -m 'deploy'
+git commit -m "Deployment from dev repo"
 
 git push -f git@github.com:segeeslice/segeeslice.github.io.git master
 
