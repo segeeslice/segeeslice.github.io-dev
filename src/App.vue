@@ -1,19 +1,19 @@
 <template>
   <div id="app">
-    <h1>Hello world!</h1>
+    <v-toolbar>
+      <v-toolbar-title>Welcome!</v-toolbar-title>
+    </v-toolbar>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
 export default {
-  name: 'app',
-  components: {
-    HelloWorld
-  }
+  name: 'app'
 }
 </script>
 
 <style>
+#app {
+    font-family: 'Roboto';
+}
 </style>
