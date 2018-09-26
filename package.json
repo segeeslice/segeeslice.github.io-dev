@@ -6,10 +6,12 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
-    "deploy": "./deploy.sh"
+    "deploy": "sh ./deploy.sh"
   },
   "dependencies": {
-    "vue": "^2.5.17"
+    "@babel/polyfill": "^7.0.0-rc.1",
+    "vue": "^2.5.17",
+    "vuetify": "^1.2.0"
   },
   "devDependencies": {
     "@babel/core": "^7.0.0-beta.47",
@@ -21,6 +23,7 @@
     "eslint-plugin-node": "^7.0.1",
     "eslint-plugin-promise": "^4.0.1",
     "eslint-plugin-standard": "^4.0.0",
+    "vue-cli-plugin-vuetify": "^0.2.0",
     "vue-template-compiler": "^2.5.17"
   }
 }
