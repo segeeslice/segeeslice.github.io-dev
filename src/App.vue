@@ -1,12 +1,12 @@
 <template>
   <div id="app">
-    <v-layout row wrap>
+    <v-layout row wrap :style="style1">
       <v-flex xs12>
         <v-card color="transparent" height="100vh" class="text-xs-center">
-            <div style="padding-top:40vh; color:white;">
-              <h1>Dustin Seger</h1>
-              <h3>A portfolio</h3>
-            </div>
+          <div style="padding-top:40vh; color:white;">
+            <h1>Dustin Seger</h1>
+            <h3>A portfolio</h3>
+          </div>
         </v-card>
       </v-flex>
 
@@ -57,6 +57,21 @@ export default {
   name: 'app',
   data () {
     return {
+      baseUrl: process.env.BASE_URL,
+      baseStyle: {
+        backgroundRepeat: 'no-repeat',
+        backgroundAttachment: 'fixed',
+        backgroundSize: 'cover'
+      },
+      backgrounds: [
+        './assets/mountain-sunset-min.jpg',
+        './assets/mountain-min.jpg'
+      ]
+    }
+  },
+  computed: {
+    style1 () {
+      return Object.assign(this.baseStyle, { backgroundImage: 'url(' + require(`${this.backgrounds[0]}`) + ')' })
     }
   }
 }
@@ -64,11 +79,7 @@ export default {
 
 <style>
 #app {
-  font-family: 'Roboto';
-  background-image: url('./assets/mountain-sunset-min.jpg');
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
+  font-family: 'Roboto'
 }
 h1 {
   font-size: 60px;
