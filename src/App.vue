@@ -1,8 +1,9 @@
 <template>
-  <div id="app">
-    <v-layout row wrap :style="style1">
+  <div id="app" v-scroll="onScroll">
+    <div :style="style1"/>
+    <v-layout row wrap>
       <v-flex xs12>
-        <v-card color="transparent" height="100vh" class="text-xs-center">
+        <v-card flat :class="['faded', 'text-xs-center']" height="100vh">
           <div class="white-text" style="padding-top:40vh;">
             <h1>Dustin Seger</h1>
             <h3>A portfolio</h3>
@@ -11,7 +12,7 @@
       </v-flex>
 
       <v-flex xs12>
-        <v-card color="transparent">
+        <v-card flat class="faded">
           <v-card-text class="white-text">
             <h2>Quick Summary</h2>
             <p>
@@ -28,7 +29,7 @@
       </v-flex>
 
       <v-flex xs12>
-        <v-card color="transparent">
+        <v-card flat class="faded">
           <v-card-text class="white-text">
             <h2>About me</h2>
             <p>
@@ -57,21 +58,63 @@ export default {
   name: 'app',
   data () {
     return {
+      // Other
+      windowHeight: window.innerHeight,
+      scrollY: 0,
+
+      // Styles
       baseUrl: process.env.BASE_URL,
       baseStyle: {
         backgroundRepeat: 'no-repeat',
         backgroundAttachment: 'fixed',
-        backgroundSize: 'cover'
+        backgroundSize: 'cover',
+        opacity: 1,
+        position: 'absolute',
+        top: 0,
+        left: 0,
+        right: 0,
+        bottom: 0
       },
       backgrounds: [
         './assets/mountain-sunset-min.jpg',
-        './assets/mountain-min.jpg'
-      ]
+        './assets/lighthouse-min.jpg'
+      ],
+      backgroundIndex: 0
     }
+  },
+  mounted () {
+    this.$nextTick(() => {
+      window.addEventListener('resize', () => {
+        this.windowHeight = window.innerHeight
+      })
+    })
   },
   computed: {
     style1 () {
-      return Object.assign(this.baseStyle, { backgroundImage: 'url(' + require(`${this.backgrounds[0]}`) + ')' })
+      return Object.assign(this.baseStyle, { backgroundImage: 'url(' + require(`${this.backgrounds[this.backgroundIndex]}`) + ')' })
+    }
+  },
+  methods: {
+    // NOTE: behaves a little strange on window resize, but not easy to fix
+    onScroll (val) {
+      let y = val.pageY
+      this.scrollY = y
+
+      // Opacity lowers to 0 when halfway down window height
+      let opacResult = -2 / this.windowHeight * y + 1
+      if (y < (this.windowHeight / 2)) {
+        this.changeBackground(0)
+        this.changeOpacity(opacResult)
+      } else {
+        this.changeBackground(1)
+        this.changeOpacity(-opacResult)
+      }
+    },
+    changeOpacity (val) {
+      this.baseStyle.opacity = val
+    },
+    changeBackground (index) {
+      this.backgroundIndex = index
     }
   }
 }
@@ -79,9 +122,11 @@ export default {
 
 <style>
 #app {
-  font-family: 'Roboto'
+  font-family: 'Roboto';
+  background-color: rgb(0,0,0);
+  position: relative;
 }
-.transparent {
+.faded {
   background-color: rgba(0, 0, 0, .6)!important;
   border-color: rgba(0, 0, 0, .6)!important;
 }
@@ -94,8 +139,12 @@ h2 {
 h3 {
   font-size: 25px;
 }
+p {
+  font-size: 16px;
+}
 
 .white-text {
   color: white;
+  opacity: 1;
 }
 </style>
