@@ -126,7 +126,9 @@ export default {
       },
       backgrounds: [
         './assets/mountain-sunset-min.jpg',
-        './assets/lighthouse-min.jpg'
+        './assets/lighthouse-min.jpg',
+        './assets/mountain-min.jpg',
+        './assets/mountain-cold.jpg'
       ],
       backgroundIndex: 0,
       resumeLocation: resume
@@ -147,24 +149,26 @@ export default {
   methods: {
     // NOTE: behaves a little strange on window resize, but not easy to fix
     onScroll (val) {
-      let y = val.pageY
-      this.scrollY = y
+      this.scrollY = val.pageY
 
-      // Opacity lowers to 0 when halfway down window height
-      let opacResult = -2 / this.windowHeight * y + 1
-      if (y < (this.windowHeight / 2)) {
-        this.changeBackground(0)
-        this.changeOpacity(opacResult)
-      } else {
-        this.changeBackground(1)
-        this.changeOpacity(-opacResult)
-      }
+      // Lower opacity to 0 when halfway down window height, then pop back up
+      let opacResult = this.opacFunction(val.pageY / this.windowHeight)
+      this.changeOpacity(opacResult)
+
+      // Change background when opacity is 0
+      this.changeBackground(Math.floor(val.pageY / this.windowHeight + 0.5))
+    },
+    opacFunction (val) {
+      // Cosine graph with range [0, 1] and domain [0, 1]
+      return Math.cos(2 * val * Math.PI) / 2 + 0.5
     },
     changeOpacity (val) {
+      console.log(val)
       this.baseStyle.opacity = val
     },
     changeBackground (index) {
-      this.backgroundIndex = index
+      // Roll back index if over the length
+      this.backgroundIndex = index % this.backgrounds.length
     }
   }
 }
