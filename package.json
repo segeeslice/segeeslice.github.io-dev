@@ -1,6 +1,6 @@
 {
   "name": "segeeslice.github.io-dev",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
@@ -23,6 +23,7 @@
     "eslint-plugin-node": "^7.0.1",
     "eslint-plugin-promise": "^4.0.1",
     "eslint-plugin-standard": "^4.0.0",
+    "file-loader": "^2.0.0",
     "vue-cli-plugin-vuetify": "^0.2.0",
     "vue-template-compiler": "^2.5.17"
   }
