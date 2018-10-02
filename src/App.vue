@@ -6,100 +6,83 @@
         <v-card flat :class="['faded', 'text-xs-center']" height="100vh">
           <div class="white-text" style="padding-top:40vh;">
             <h1>Dustin Seger</h1>
-            <h3>Computer science </h3>
+            <h3>Computer science student</h3>
           </div>
         </v-card>
       </v-flex>
 
-      <v-flex xs12>
-        <v-card flat class="faded">
-          <v-flex sm12 md10 offset-md1 lg8 offset-lg2>
-            <v-card-text class="white-text">
-              <!-- TODO: Picture of me -->
-              <h2>About me</h2>
-              <p>
-                My name is Dustin Seger. I'm a Computer Science major at
-                the University of Cincinnati slated to graduate Spring 2021 with a
-                minor in German Studies.
-              </p>
-              <p>
-                In my 2 previous co-ops with Crown Equipment Corporation, I
-                developed on-board embedded system applications and PC-based
-                engineering utilities. This required Linux and web app development,
-                and my contributions are still widely used throughout the company,
-                one day expanding to end customers. While maintaining my 4.0 GPA,
-                I have gained fundamental knowledge through different languages
-                in various crucial computer science topics, such as object-oriented
-                vs. functional programming, threads and thread safety, and a number
-                of widely utilizable data structures. I hope to explore more into
-                new topics and languages, as I take pride and find accomplishment
-                in my learning.
-              </p>
-              <p>
-                I'm interested in software engineering and development with no
-                current preference towards front-end or back-end programming.
-                After school, I hope to work in an environment that is passionate
-                and encourages exploration. As a member of the International Co-op
-                Program, I am open to co-ops in Germany through Spring and Summer
-                2020, but I'm not currently seeking a new position.
-              </p>
+      <body-card
+        html="
+        <h2>About me</h2>
+        <p>
+          My name is Dustin Seger. I'm a Computer Science major at
+          the University of Cincinnati slated to graduate Spring 2021 with a
+          minor in German Studies.
+        </p>
+        <p>
+          In my 2 previous co-ops with Crown Equipment Corporation, I
+          developed on-board embedded system applications and PC-based
+          engineering utilities. This required Linux and web app development,
+          and my contributions are still widely used throughout the company,
+          one day expanding to end customers. While maintaining my 4.0 GPA,
+          I have gained fundamental knowledge through different languages
+          in various crucial computer science topics, such as object-oriented
+          vs. functional programming, threads and thread safety, and a number
+          of widely utilizable data structures. I hope to explore more into
+          new topics and languages, as I take pride and find accomplishment
+          in my learning.
+        </p>
+        <p>
+          I'm interested in software engineering and development with no
+          current preference towards front-end or back-end programming.
+          After school, I hope to work in an environment that is passionate
+          and encourages exploration. As a member of the International Co-op
+          Program, I am open to co-ops in Germany through Spring and Summer
+          2020, but I'm not currently seeking a new position.
+        </p>"
+      />
+      <download-button :file="resumeLocation"/>
 
-              <a :href="resumeLocation" download>
-                <v-btn dark outline>
-                  <v-icon left dark>cloud_download</v-icon>
-                  Download My Resume
-                </v-btn>
-              </a>
-              &nbsp;
-            </v-card-text>
-          </v-flex>
-        </v-card>
-      </v-flex>
-
-      <v-flex xs12>
-        <v-card flat class="faded">
-          <v-flex sm12 md10 offset-md1 lg8 offset-lg2>
-            <v-card-text class="white-text">
-              <h2>Quick Links</h2>
-              <p>
-                http://lorem.ipsum.dolor
-                http://sit.amet.consectetur
-              </p>
-            </v-card-text>
-          </v-flex>
-        </v-card>
-      </v-flex>
-
-      <v-flex xs12>
-        <v-card flat class="faded">
-          <v-flex sm12 md10 offset-md1 lg8 offset-lg2>
-            <v-card-text class="white-text">
-              <h2>About me</h2>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. In hendrerit gravida rutrum quisque non tellus orci ac auctor. Scelerisque felis imperdiet proin fermentum leo vel orci. Turpis egestas sed tempus urna et pharetra. Id volutpat lacus laoreet non curabitur gravida arcu. Amet purus gravida quis blandit turpis cursus. Metus dictum at tempor commodo ullamcorper a lacus vestibulum sed. Ut tellus elementum sagittis vitae et leo duis ut. Faucibus nisl tincidunt eget nullam non. Tempor commodo ullamcorper a lacus. Vestibulum lorem sed risus ultricies tristique. Erat nam at lectus urna duis. Facilisi cras fermentum odio eu. Et malesuada fames ac turpis egestas sed tempus urna. In hac habitasse platea dictumst vestibulum rhoncus est. Tortor aliquam nulla facilisi cras fermentum odio eu feugiat pretium. Nullam non nisi est sit amet facilisis magna etiam tempor. Augue eget arcu dictum varius duis at consectetur lorem.
-              </p>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. In hendrerit gravida rutrum quisque non tellus orci ac auctor. Scelerisque felis imperdiet proin fermentum leo vel orci. Turpis egestas sed tempus urna et pharetra. Id volutpat lacus laoreet non curabitur gravida arcu. Amet purus gravida quis blandit turpis cursus. Metus dictum at tempor commodo ullamcorper a lacus vestibulum sed. Ut tellus elementum sagittis vitae et leo duis ut. Faucibus nisl tincidunt eget nullam non. Tempor commodo ullamcorper a lacus. Vestibulum lorem sed risus ultricies tristique. Erat nam at lectus urna duis. Facilisi cras fermentum odio eu. Et malesuada fames ac turpis egestas sed tempus urna. In hac habitasse platea dictumst vestibulum rhoncus est. Tortor aliquam nulla facilisi cras fermentum odio eu feugiat pretium. Nullam non nisi est sit amet facilisis magna etiam tempor. Augue eget arcu dictum varius duis at consectetur lorem.
-              </p>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. In hendrerit gravida rutrum quisque non tellus orci ac auctor. Scelerisque felis imperdiet proin fermentum leo vel orci. Turpis egestas sed tempus urna et pharetra. Id volutpat lacus laoreet non curabitur gravida arcu. Amet purus gravida quis blandit turpis cursus. Metus dictum at tempor commodo ullamcorper a lacus vestibulum sed. Ut tellus elementum sagittis vitae et leo duis ut. Faucibus nisl tincidunt eget nullam non. Tempor commodo ullamcorper a lacus. Vestibulum lorem sed risus ultricies tristique. Erat nam at lectus urna duis. Facilisi cras fermentum odio eu. Et malesuada fames ac turpis egestas sed tempus urna. In hac habitasse platea dictumst vestibulum rhoncus est. Tortor aliquam nulla facilisi cras fermentum odio eu feugiat pretium. Nullam non nisi est sit amet facilisis magna etiam tempor. Augue eget arcu dictum varius duis at consectetur lorem.
-              </p>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. In hendrerit gravida rutrum quisque non tellus orci ac auctor. Scelerisque felis imperdiet proin fermentum leo vel orci. Turpis egestas sed tempus urna et pharetra. Id volutpat lacus laoreet non curabitur gravida arcu. Amet purus gravida quis blandit turpis cursus. Metus dictum at tempor commodo ullamcorper a lacus vestibulum sed. Ut tellus elementum sagittis vitae et leo duis ut. Faucibus nisl tincidunt eget nullam non. Tempor commodo ullamcorper a lacus. Vestibulum lorem sed risus ultricies tristique. Erat nam at lectus urna duis. Facilisi cras fermentum odio eu. Et malesuada fames ac turpis egestas sed tempus urna. In hac habitasse platea dictumst vestibulum rhoncus est. Tortor aliquam nulla facilisi cras fermentum odio eu feugiat pretium. Nullam non nisi est sit amet facilisis magna etiam tempor. Augue eget arcu dictum varius duis at consectetur lorem.
-              </p>
-            </v-card-text>
-          </v-flex>
-        </v-card>
-      </v-flex>
+      <body-card
+        html="
+        <h2>Quick Links</h2>
+        <p>
+          http://lorem.ipsum.dolor
+          http://sit.amet.consectetur
+        </p>
+        "
+      />
+      <body-card
+        html="
+        <h2>About me</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. In hendrerit gravida rutrum quisque non tellus orci ac auctor. Scelerisque felis imperdiet proin fermentum leo vel orci. Turpis egestas sed tempus urna et pharetra. Id volutpat lacus laoreet non curabitur gravida arcu. Amet purus gravida quis blandit turpis cursus. Metus dictum at tempor commodo ullamcorper a lacus vestibulum sed. Ut tellus elementum sagittis vitae et leo duis ut. Faucibus nisl tincidunt eget nullam non. Tempor commodo ullamcorper a lacus. Vestibulum lorem sed risus ultricies tristique. Erat nam at lectus urna duis. Facilisi cras fermentum odio eu. Et malesuada fames ac turpis egestas sed tempus urna. In hac habitasse platea dictumst vestibulum rhoncus est. Tortor aliquam nulla facilisi cras fermentum odio eu feugiat pretium. Nullam non nisi est sit amet facilisis magna etiam tempor. Augue eget arcu dictum varius duis at consectetur lorem.
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. In hendrerit gravida rutrum quisque non tellus orci ac auctor. Scelerisque felis imperdiet proin fermentum leo vel orci. Turpis egestas sed tempus urna et pharetra. Id volutpat lacus laoreet non curabitur gravida arcu. Amet purus gravida quis blandit turpis cursus. Metus dictum at tempor commodo ullamcorper a lacus vestibulum sed. Ut tellus elementum sagittis vitae et leo duis ut. Faucibus nisl tincidunt eget nullam non. Tempor commodo ullamcorper a lacus. Vestibulum lorem sed risus ultricies tristique. Erat nam at lectus urna duis. Facilisi cras fermentum odio eu. Et malesuada fames ac turpis egestas sed tempus urna. In hac habitasse platea dictumst vestibulum rhoncus est. Tortor aliquam nulla facilisi cras fermentum odio eu feugiat pretium. Nullam non nisi est sit amet facilisis magna etiam tempor. Augue eget arcu dictum varius duis at consectetur lorem.
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. In hendrerit gravida rutrum quisque non tellus orci ac auctor. Scelerisque felis imperdiet proin fermentum leo vel orci. Turpis egestas sed tempus urna et pharetra. Id volutpat lacus laoreet non curabitur gravida arcu. Amet purus gravida quis blandit turpis cursus. Metus dictum at tempor commodo ullamcorper a lacus vestibulum sed. Ut tellus elementum sagittis vitae et leo duis ut. Faucibus nisl tincidunt eget nullam non. Tempor commodo ullamcorper a lacus. Vestibulum lorem sed risus ultricies tristique. Erat nam at lectus urna duis. Facilisi cras fermentum odio eu. Et malesuada fames ac turpis egestas sed tempus urna. In hac habitasse platea dictumst vestibulum rhoncus est. Tortor aliquam nulla facilisi cras fermentum odio eu feugiat pretium. Nullam non nisi est sit amet facilisis magna etiam tempor. Augue eget arcu dictum varius duis at consectetur lorem.
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. In hendrerit gravida rutrum quisque non tellus orci ac auctor. Scelerisque felis imperdiet proin fermentum leo vel orci. Turpis egestas sed tempus urna et pharetra. Id volutpat lacus laoreet non curabitur gravida arcu. Amet purus gravida quis blandit turpis cursus. Metus dictum at tempor commodo ullamcorper a lacus vestibulum sed. Ut tellus elementum sagittis vitae et leo duis ut. Faucibus nisl tincidunt eget nullam non. Tempor commodo ullamcorper a lacus. Vestibulum lorem sed risus ultricies tristique. Erat nam at lectus urna duis. Facilisi cras fermentum odio eu. Et malesuada fames ac turpis egestas sed tempus urna. In hac habitasse platea dictumst vestibulum rhoncus est. Tortor aliquam nulla facilisi cras fermentum odio eu feugiat pretium. Nullam non nisi est sit amet facilisis magna etiam tempor. Augue eget arcu dictum varius duis at consectetur lorem.
+        </p>
+        "
+      />
     </v-layout>
   </div>
   <!--TODO: Footer?-->
 </template>
 
 <script>
+import BodyCard from './components/BodyCard.vue'
+import DownloadButton from './components/DownloadButton.vue'
+
+import resume from '../public/Dustin-Seger-Resume.pdf'
 
 export default {
   name: 'app',
+  components: { BodyCard, DownloadButton },
   data () {
     return {
       // Other
@@ -124,7 +107,7 @@ export default {
         './assets/lighthouse-min.jpg'
       ],
       backgroundIndex: 0,
-      resumeLocation: '../public/Dustin-Seger-Resume.pdf'
+      resumeLocation: resume
     }
   },
   mounted () {
