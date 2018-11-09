@@ -163,7 +163,6 @@ export default {
       return Math.cos(2 * val * Math.PI) / 2 + 0.5
     },
     changeOpacity (val) {
-      console.log(val)
       this.baseStyle.opacity = val
     },
     changeBackground (index) {
