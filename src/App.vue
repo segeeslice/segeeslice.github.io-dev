@@ -159,8 +159,11 @@ export default {
       this.changeBackground(Math.floor(val.pageY / this.windowHeight + 0.5))
     },
     opacFunction (val) {
-      // Cosine graph with range [0, 1] and domain [0, 1]
-      return Math.cos(2 * val * Math.PI) / 2 + 0.5
+      // Cosine graph with range [0, 1] and domain [0, 1] is:
+      //    cos(2x*pi) / 2 + 1.5
+
+      // Following has been modified to increase time of full opacity:
+      return Math.cos(2 * val * Math.PI) / 1.75 + (1/1.75)
     },
     changeOpacity (val) {
       this.baseStyle.opacity = val
