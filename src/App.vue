@@ -37,8 +37,9 @@
         </v-card>
       </v-flex>
 
-      <body-card
+      <body-card-image
         id="about"
+        :img="portrait"
         html="
         <h2>About me</h2>
         <p>
@@ -128,13 +129,14 @@
 
 <script>
 import BodyCard from './components/BodyCard.vue'
+import BodyCardImage from './components/BodyCardImage.vue'
 import DownloadButton from './components/DownloadButton.vue'
 
 import resume from '../public/Dustin-Seger-Resume.pdf'
 
 export default {
   name: 'app',
-  components: { BodyCard, DownloadButton },
+  components: { BodyCard, DownloadButton, BodyCardImage },
   data () {
     return {
       // Other
@@ -142,7 +144,6 @@ export default {
       scrollY: 0,
 
       // Styles
-      baseUrl: process.env.BASE_URL,
       baseStyle: {
         backgroundRepeat: 'no-repeat',
         backgroundAttachment: 'fixed',
@@ -161,7 +162,10 @@ export default {
         './assets/mountain-cold.jpg'
       ],
       backgroundIndex: 0,
+
+      // Other assets
       resumeLocation: resume,
+      portrait: require('@/assets/Dustin-Seger-Portrait.jpg'),
 
       // Quick link info
       link: [
