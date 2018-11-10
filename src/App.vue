@@ -1,6 +1,32 @@
 <template>
   <div id="app" v-scroll="onScroll">
-    <div :style="style1"/>
+    <!-- Set the dynamic background for the whole site -->
+    <div :style="dynamicBackground"/>
+
+    <!-- Button link column -->
+    <a
+      v-for="(item, index) in link"
+      :key="item.id"
+      :href = "`#${item.id}`"
+      :v-scroll-to="item.id"
+    >
+      <v-tooltip left nudge-bottom="13">
+        <v-btn
+          slot="activator"
+          absolute
+          dark
+          fab
+          top
+          right
+          color="gray"
+          :style="[buttonStyle, { top: `${index * 60 + 10}px` }]"
+        >
+          <v-icon>{{ item.icon }}</v-icon>
+        </v-btn>
+        <span>{{ item.tip }}</span>
+      </v-tooltip>
+    </a>
+
     <v-layout row wrap>
       <v-flex xs12>
         <v-card flat :class="['faded', 'text-xs-center']" height="100vh">
@@ -12,6 +38,7 @@
       </v-flex>
 
       <body-card
+        id="about"
         html="
         <h2>About me</h2>
         <p>
@@ -44,6 +71,7 @@
       <download-button :file="resumeLocation"/>
 
       <body-card
+        id="contact"
         html="
         <h2>Contact info</h2>
         <p>
@@ -55,6 +83,7 @@
         "
       />
       <body-card
+        id="work"
         html="
         <h2>Work experience</h2>
         <p>
@@ -78,6 +107,7 @@
         "
       />
       <body-card
+        id="activities"
         html="
         <h2>Activities</h2>
         <p>
@@ -131,7 +161,21 @@ export default {
         './assets/mountain-cold.jpg'
       ],
       backgroundIndex: 0,
-      resumeLocation: resume
+      resumeLocation: resume,
+
+      // Quick link info
+      link: [
+        { id: 'top', icon: 'arrow_upward', tip: 'Top' },
+        { id: 'about', icon: 'info', tip: 'About me' },
+        { id: 'contact', icon: 'contact_mail', tip: 'Contact info' },
+        { id: 'work', icon: 'work', tip: 'Work experience' },
+        { id: 'activities', icon: 'person', tip: 'Personal activities' }
+      ],
+      buttonStyle: {
+        position: 'fixed',
+        height: '50px',
+        width: '50px'
+      }
     }
   },
   mounted () {
@@ -142,7 +186,7 @@ export default {
     })
   },
   computed: {
-    style1 () {
+    dynamicBackground () {
       return Object.assign(this.baseStyle, { backgroundImage: 'url(' + require(`${this.backgrounds[this.backgroundIndex]}`) + ')' })
     }
   },
@@ -163,7 +207,7 @@ export default {
       //    cos(2x*pi) / 2 + 1.5
 
       // Following has been modified to increase time of full opacity:
-      return Math.cos(2 * val * Math.PI) / 1.75 + (1/1.75)
+      return Math.cos(2 * val * Math.PI) / 1.75 + (1 / 1.75)
     },
     changeOpacity (val) {
       this.baseStyle.opacity = val
@@ -206,4 +250,5 @@ a {
   color: white;
   opacity: 1;
 }
+
 </style>
