@@ -5,7 +5,7 @@
       <v-layout row>
         <v-flex sm8 md7 offset-md1 lg6 offset-lg2>
           <v-card-text class="white-text">
-              <span v-html="html"/>
+            <component :is="body"/>
           </v-card-text>
         </v-flex>
         <v-flex sm3 md3 lg2>
@@ -21,6 +21,6 @@
 <script>
 export default {
   name: 'body-card-image',
-  props: [ 'html', 'img' ]
+  props: [ 'body', 'img' ]
 }
 </script>

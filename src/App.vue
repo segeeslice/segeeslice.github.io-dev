@@ -27,6 +27,7 @@
       </v-tooltip>
     </a>
 
+    <!-- Main body -->
     <v-layout row wrap>
       <v-flex xs12>
         <v-card flat :class="['faded', 'text-xs-center']" height="100vh">
@@ -37,91 +38,12 @@
         </v-card>
       </v-flex>
 
-      <body-card-image
-        id="about"
-        :img="portrait"
-        html="
-        <h2>About me</h2>
-        <p>
-          My name is Dustin Seger. I'm a Computer Science major at
-          the University of Cincinnati slated to graduate Spring 2021 with a
-          minor in German Studies.
-        </p>
-        <p>
-          In my 2 previous co-ops with Crown Equipment Corporation, I
-          developed on-board embedded system applications and PC-based
-          engineering utilities. This required Linux and web app development,
-          and my contributions are still widely used throughout the company,
-          one day expanding to end customers. While maintaining my 4.0 GPA,
-          I have gained fundamental knowledge through different languages
-          in various crucial computer science topics, such as object-oriented
-          vs. functional programming, threads and thread safety, and a number
-          of widely utilizable data structures. I hope to explore more into
-          new topics and languages, as I take pride and find accomplishment
-          in my learning.
-        </p>
-        <p>
-          I'm interested in software engineering and development with no
-          current preference towards front-end or back-end programming.
-          After school, I hope to work in an environment that is passionate
-          and encourages exploration. As a member of the International Co-op
-          Program, I am open to co-ops in Germany through Spring and Summer
-          2020, but I'm not currently seeking a new position.
-        </p>"
-      />
+      <body-card-image id="about" :body="aboutMe" :img="portrait"/>
       <download-button :file="resumeLocation"/>
 
-      <body-card
-        id="contact"
-        html="
-        <h2>Contact info</h2>
-        <p>
-          School Email:   <a href='mailto:segerde@mail.uc.edu'>segerde@mail.uc.edu</a> <br/>
-          Personal Email: <a href='mailto:dustin.seger@hotmail.com'>dustin.seger@hotmail.com</a> <br/>
-          Phone:          419-790-8007 <br/>
-          <i>(If I don't answer, leave a message!)</i> <br/>
-        </p>
-        "
-      />
-      <body-card
-        id="work"
-        html="
-        <h2>Work experience</h2>
-        <p>
-          In Fall of 2017 and Summer of 2018, I co-oped with Crown Equipment Corporation of New Bremen, OH. Despite being a worldwide corporation, they are stationed in a town of roughly 5000 people! In this town, they develop and manufacture a variety of lift trucks and utilities for warehouse management. I was hired onto an engineering team for the C1515 project, developing touch screen devices on lift trucks. These miniature computers were developed from the ground up with a custom-coded Linux operating system. The department followed a scaled agile framework for development, also known as <a href='https://www.scaledagileframework.com/'>SAFe</a>. This created a fast-paced, organized, productive development cycle.
-        </p>
-        <p>
-          While the work environment was too rigorous for me to be immediately applied to the truck software, I spent most of my time developing engineering utilities to make the development process much smoother...
-        </p>
-        <p>
-          The first tool I worked on was the Gena Truck Download Utility. The program's purpose is to allow for an ease of software installation onto the lift truck, including the hardware. The program had in-depth knowledge of the lift truck's inner workings and required moving files to proper places, initializing scripts, and knowing when to do what. This is an <a href='https://electronjs.org/'>Electron</a> application, using a combination of <a href='https://angularjs.org/'>AngularJS</a> and <a href='http://getbootstrap.com/'>Bootstrap</a> for UI and <a href='https://nodejs.org/en/'>NodeJS</a> for package management and utilities. During my time at Crown, especially in Fall 2017, I was widely developing this program independently while still vastly exceeding the expectations of my peers. I worked to add features, support dependencies, test, and fix bugs. This program is currently being prepared for use with end-customers so they can update their own software with new features as need be.
-        </p>
-        <p>
-          I also moved onto another project my first semester with Crown called the IMM Data Tool. The IMM, or Information Management Module, is the touch screen device that goes onto lift trucks. Despite typically being vastly different, each lift truck type had the same operating system. The difference between them was the data configuration, previously handled through an unmanageable number of CSV and XML files. The purpose of the IMM Data Tool was to alleviate some of this work and handle small details in the background while presenting the necessary data in a nice, user-friendly format. Fittingly, this program was also an <a href='https://electronjs.org/'>Electron</a> and <a href='https://nodejs.org/en/'>NodeJS</a> application, but it uses the vastly different <a href='https://vuejs.org/'>VueJS</a> framework for live data processing and effortless UI development <i>(this website is made with this framework!)</i>. I effectively helped to pioneer this tool alongside a mentor of mine, and the tool is still expanding and being used throughout the engineering department today.
-        </p>
-        <p>
-          In my second semester, I expanded quite a bit into other areas, experimenting with testing types (unit, system, end-to-end, UI) and dabbling in Linux development with C++. I also touched a lot of shell scripting through both of these endeavors, as well as through the Download Utility's interface with the lift truck.
-        </p>
-        <p>
-          It was through these projects that I learned a lot of the engineering world. Obviously, I learned to develop in a fast-paced environment, often needing to manage dependencies and multiple tasks. This vastly boosted my time-management skills and understanding of task priority. As I was often the sole supporter of the Download Utility, I learned how to handle complaints and suggestions for software, aptly allowing me to develop my communications skills and understanding of the end-user. I was shown a lot of new UI design concepts I had never heard of before, such as not impeding habituation, and I'm sure I could aptly apply these to my future positions.
-        </p>
-        "
-      />
-      <body-card
-        id="activities"
-        html="
-        <h2>Activities</h2>
-        <p>
-          Many of my programming activities can be found on my <a href='https://github.com/segeeslice'>personal GitHub Page</a>. Schoolwork does come first, so I admittedly have not found much time to aptly finish these projects. However, I hope to eventually showcase most, if not all, of the concepts and languages I have learned through UC and personal studies. The <a href='https://github.com/segeeslice/Movie-Tracker'>Movie Tracker</a> and <a href='https://github.com/segeeslice/Python-GIF-Searcher'>Python GIF Searcher</a> are currently my most notable projects to check out.
-        </p>
-        <p>
-          When I'm not coding, I love to play frisbee with friends, write my own music, and research existential and interstellar topics. I've volunteered with various places through UC, such as Granny's Garden, Clean Up Cincy, and TechOlympics. As mentioned previously, I am interested in Germany and German studies, as I have 4 years of prior experience with the language. I love to delve into German culture, and look forward to heading there with the ICP in 2020.
-        </p>
-        <p>
-          With a current standing 4.0 GPA, I have been on Dean's List every semester at UC. I also recently turned in an essay on music writing as a literacy that will be entered into a writing competition in January 2019, potentially being published if it is well received.
-        </p>
-        "
-      />
+      <body-card id="contact" :body="contactInfo"/>
+      <body-card id="work" :body="workExperience"/>
+      <body-card id="activities" :body="activities"/>
     </v-layout>
   </div>
   <!--TODO: Footer?-->
@@ -132,11 +54,24 @@ import BodyCard from './components/BodyCard.vue'
 import BodyCardImage from './components/BodyCardImage.vue'
 import DownloadButton from './components/DownloadButton.vue'
 
+import AboutMe from './components/body-text/AboutMe.vue'
+import ContactInfo from './components/body-text/ContactInfo.vue'
+import WorkExperience from './components/body-text/WorkExperience.vue'
+import Activities from './components/body-text/Activities.vue'
+
 import resume from '../public/Dustin-Seger-Resume.pdf'
 
 export default {
   name: 'app',
-  components: { BodyCard, DownloadButton, BodyCardImage },
+  components: {
+    BodyCard,
+    DownloadButton,
+    BodyCardImage,
+    AboutMe,
+    ContactInfo,
+    WorkExperience,
+    Activities
+  },
   data () {
     return {
       // Other
@@ -192,7 +127,13 @@ export default {
   computed: {
     dynamicBackground () {
       return Object.assign(this.baseStyle, { backgroundImage: 'url(' + require(`${this.backgrounds[this.backgroundIndex]}`) + ')' })
-    }
+    },
+
+    // Computed components required for passing as prop
+    aboutMe () { return AboutMe },
+    contactInfo () { return ContactInfo },
+    workExperience () { return WorkExperience },
+    activities () { return Activities }
   },
   methods: {
     // NOTE: behaves a little strange on window resize, but not easy to fix
