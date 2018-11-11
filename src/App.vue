@@ -54,10 +54,6 @@ export default {
   },
   data () {
     return {
-      // Other
-      windowHeight: window.innerHeight,
-      scrollY: 0,
-
       // Style details
       baseStyle: {
         backgroundRepeat: 'no-repeat',
@@ -89,16 +85,23 @@ export default {
 
       // Other assets
       resumeLocation: resume,
-      portrait: require('@/assets/Dustin-Seger-Portrait.jpg')
+      portrait: require('@/assets/Dustin-Seger-Portrait.jpg'),
+
+      // Scroll behavior assets
+      windowHeight: window.innerHeight,
+      lastScroll: { pageY: 0 }
     }
   },
-  // TODO: computed property instead?
+  // NOTE: Must be here since computed prop does not listen for size changes automatically
   mounted () {
     this.$nextTick(() => {
       window.addEventListener('resize', () => {
         this.windowHeight = window.innerHeight
       })
     })
+  },
+  watch: {
+    windowHeight () { this.onScroll(this.lastScroll) }
   },
   computed: {
     dynamicBackground () {
@@ -112,9 +115,8 @@ export default {
     activities () { return Activities }
   },
   methods: {
-    // NOTE: behaves a little strange on window resize, but not easy to fix
     onScroll (val) {
-      this.scrollY = val.pageY
+      this.lastScroll = val
 
       // Lower opacity to 0 when halfway down window height, then pop back up
       let opacResult = this.opacFunction(val.pageY / this.windowHeight)
