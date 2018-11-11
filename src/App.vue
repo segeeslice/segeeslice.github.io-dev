@@ -3,29 +3,7 @@
     <!-- Set the dynamic background for the whole site -->
     <div :style="dynamicBackground"/>
 
-    <!-- Button link column -->
-    <a
-      v-for="(item, index) in link"
-      :key="item.id"
-      :href = "`#${item.id}`"
-      :v-scroll-to="item.id"
-    >
-      <v-tooltip left nudge-bottom="13">
-        <v-btn
-          slot="activator"
-          absolute
-          dark
-          fab
-          top
-          right
-          color="gray"
-          :style="[buttonStyle, { top: `${index * 60 + 10}px` }]"
-        >
-          <v-icon>{{ item.icon }}</v-icon>
-        </v-btn>
-        <span>{{ item.tip }}</span>
-      </v-tooltip>
-    </a>
+    <button-scroll-column :items="scrollItems"/>
 
     <!-- Main body -->
     <v-layout row wrap>
@@ -50,6 +28,7 @@
 </template>
 
 <script>
+import ButtonScrollColumn from './components/ButtonScrollColumn.vue'
 import BodyCard from './components/BodyCard.vue'
 import BodyCardImage from './components/BodyCardImage.vue'
 import DownloadButton from './components/DownloadButton.vue'
@@ -64,6 +43,7 @@ import resume from '../public/Dustin-Seger-Resume.pdf'
 export default {
   name: 'app',
   components: {
+    ButtonScrollColumn,
     BodyCard,
     DownloadButton,
     BodyCardImage,
@@ -78,7 +58,7 @@ export default {
       windowHeight: window.innerHeight,
       scrollY: 0,
 
-      // Styles
+      // Style details
       baseStyle: {
         backgroundRepeat: 'no-repeat',
         backgroundAttachment: 'fixed',
@@ -98,25 +78,21 @@ export default {
       ],
       backgroundIndex: 0,
 
-      // Other assets
-      resumeLocation: resume,
-      portrait: require('@/assets/Dustin-Seger-Portrait.jpg'),
-
-      // Quick link info
-      link: [
+      // Scroll link items
+      scrollItems: [
         { id: 'top', icon: 'arrow_upward', tip: 'Top' },
         { id: 'about', icon: 'info', tip: 'About me' },
         { id: 'contact', icon: 'contact_mail', tip: 'Contact info' },
         { id: 'work', icon: 'work', tip: 'Work experience' },
         { id: 'activities', icon: 'person', tip: 'Personal activities' }
       ],
-      buttonStyle: {
-        position: 'fixed',
-        height: '50px',
-        width: '50px'
-      }
+
+      // Other assets
+      resumeLocation: resume,
+      portrait: require('@/assets/Dustin-Seger-Portrait.jpg')
     }
   },
+  // TODO: computed property instead?
   mounted () {
     this.$nextTick(() => {
       window.addEventListener('resize', () => {
@@ -175,6 +151,10 @@ export default {
   background-color: rgba(0, 0, 0, .65)!important;
   border-color: rgba(0, 0, 0, .65)!important;
 }
+.white-text {
+  color: white;
+  opacity: 1;
+}
 h1 {
   font-size: 60px;
 }
@@ -190,10 +170,4 @@ p {
 a {
   color: white;
 }
-
-.white-text {
-  color: white;
-  opacity: 1;
-}
-
 </style>
