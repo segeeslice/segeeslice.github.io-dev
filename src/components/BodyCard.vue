@@ -3,7 +3,7 @@
     <v-card flat class="faded">
       <v-flex sm11 md10 offset-md1 lg8 offset-lg2>
         <v-card-text class="white-text">
-          <div v-html="html"/>
+          <component :is="body"/>
         </v-card-text>
       </v-flex>
     </v-card>
@@ -13,6 +13,6 @@
 <script>
 export default {
   name: 'body-card',
-  props: [ 'html' ]
+  props: [ 'body' ]
 }
 </script>

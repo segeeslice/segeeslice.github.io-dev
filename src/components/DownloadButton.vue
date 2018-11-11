@@ -19,6 +19,6 @@
 <script>
 export default {
   name: 'download-button',
-  props: ['file']
+  props: [ 'file' ]
 }
 </script>
