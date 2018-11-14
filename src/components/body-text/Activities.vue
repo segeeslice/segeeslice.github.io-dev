@@ -4,6 +4,17 @@
     <p>
       Many of my programming activities can be found on my <a href='https://github.com/segeeslice'>personal GitHub Page</a>. Schoolwork does come first, so I admittedly have not found much time to aptly finish these projects. However, I hope to eventually showcase most, if not all, of the concepts and languages I have learned through UC and personal studies. The <a href='https://github.com/segeeslice/Movie-Tracker'>Movie Tracker</a> and <a href='https://github.com/segeeslice/Python-GIF-Searcher'>Python GIF Searcher</a> are currently my most notable projects to check out.
     </p>
+    <v-expansion-panel dark popout>
+      <v-expansion-panel-content>
+        <span slot="header">Movie Tracker Demo</span>
+        <v-card>
+          <v-card-text>
+            Foooooooooooooooooooooooooo baaaaaaaaaaaaaaaaaaaaaaaar
+          </v-card-text>
+        </v-card>
+      </v-expansion-panel-content>
+    </v-expansion-panel>
+    <br/>
     <p>
       When I'm not coding, I love to play frisbee with friends, write my own music, and research existential and interstellar topics. I've volunteered with various places through UC, such as Granny's Garden, Clean Up Cincy, and TechOlympics. As mentioned previously, I am interested in Germany and German studies, as I have 4 years of prior experience with the language. I love to delve into German culture, and look forward to heading there with the ICP in 2020.
     </p>
