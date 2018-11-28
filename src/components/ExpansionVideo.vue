@@ -9,17 +9,21 @@ NOTE: videos should be placed in the /public folder
 -->
 
 <template>
-  <v-expansion-panel v-model="open" dark expand>
-    <v-expansion-panel-content>
-      <span slot="header">{{ title }}</span>
-      <v-card>
-        <video width="100%" controls id="videoEl" @canplay="updateVidInfo">
-          <source :src="path" type="video/mp4"/>
-          Your browser does not support mp4 videos! :(
-        </video>
-      </v-card>
-    </v-expansion-panel-content>
-  </v-expansion-panel>
+  <div>
+    <v-expansion-panel v-model="open" dark expand>
+      <v-expansion-panel-content>
+        <span slot="header">{{ title }}</span>
+        <v-card>
+          <video width="100%" controls id="videoEl" @canplay="updateVidInfo">
+            <source :src="path" type="video/mp4"/>
+            Your browser does not support mp4 videos! :(
+          </video>
+        </v-card>
+      </v-expansion-panel-content>
+    </v-expansion-panel>
+
+    <br/>
+  </div>
 </template>
 
 <script>
