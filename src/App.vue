@@ -16,7 +16,7 @@
         </v-card>
       </v-flex>
 
-      <body-card-image id="about" :body="aboutMe" :img="portrait"/>
+      <body-card-image id="about" :body="aboutMe" :img="portrait" position="right"/>
       <download-button :file="resumeLocation"/>
 
       <body-card id="contact" :body="contactInfo"/>
