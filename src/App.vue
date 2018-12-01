@@ -16,11 +16,15 @@
         </v-card>
       </v-flex>
 
-      <body-card-image id="about" :body="aboutMe" :img="portrait" position="right"/>
+      <body-card-image id="about" :body="aboutMe" :img="portrait" position="right" :spaces="3"/>
       <download-button :file="resumeLocation"/>
 
       <body-card id="contact" :body="contactInfo"/>
-      <body-card id="work" :body="workExperience"/>
+
+      <body-card id="work" :body="workExperience1"/>
+      <body-card-image :body="workExperience2" :img="crownHQ" position="left" :spaces="0"/>
+      <body-card :body="workExperience3"/>
+
       <body-card id="activities" :body="activities"/>
     </v-layout>
   </div>
@@ -35,7 +39,9 @@ import DownloadButton from './components/DownloadButton.vue'
 
 import AboutMe from './components/body-text/AboutMe.vue'
 import ContactInfo from './components/body-text/ContactInfo.vue'
-import WorkExperience from './components/body-text/WorkExperience.vue'
+import WE1 from './components/body-text/WorkExperience/WE1.vue'
+import WE2 from './components/body-text/WorkExperience/WE2.vue'
+import WE3 from './components/body-text/WorkExperience/WE3.vue'
 import Activities from './components/body-text/Activities.vue'
 
 import resume from '../public/Dustin-Seger-Resume.pdf'
@@ -49,7 +55,9 @@ export default {
     BodyCardImage,
     AboutMe,
     ContactInfo,
-    WorkExperience,
+    WE1,
+    WE2,
+    WE3,
     Activities
   },
   data () {
@@ -86,6 +94,7 @@ export default {
       // Other assets
       resumeLocation: resume,
       portrait: require('@/assets/Dustin-Seger-Portrait.jpg'),
+      crownHQ: require('@/assets/crown-hq.jpg'),
 
       // Scroll behavior assets
       windowHeight: window.innerHeight,
@@ -111,7 +120,9 @@ export default {
     // Computed components required for passing as prop
     aboutMe () { return AboutMe },
     contactInfo () { return ContactInfo },
-    workExperience () { return WorkExperience },
+    workExperience1 () { return WE1 },
+    workExperience2 () { return WE2 },
+    workExperience3 () { return WE3 },
     activities () { return Activities }
   },
   methods: {

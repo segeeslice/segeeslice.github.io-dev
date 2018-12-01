@@ -1,12 +1,5 @@
 <template>
   <div>
-    <h2>Work experience</h2>
-    <p>
-      In Fall of 2017 and Summer of 2018, I co-oped with Crown Equipment Corporation of New Bremen, OH. Despite being a worldwide corporation, they are stationed in a town of roughly 5000 people! In this town, they develop and manufacture a variety of lift trucks and utilities for warehouse management. I was hired onto an engineering team for the C1515 project, developing touch screen devices on lift trucks. These miniature computers were developed from the ground up with a custom-coded Linux operating system. The department followed a scaled agile framework for development, also known as <a href='https://www.scaledagileframework.com/'>SAFe</a>. This created a fast-paced, organized, productive development cycle.
-    </p>
-    <p>
-      While the work environment was too rigorous for me to be immediately applied to the truck software, I spent most of my time developing engineering utilities to make the development process much smoother...
-    </p>
     <p>
       The first tool I worked on was the Gena Truck Download Utility. The program's purpose is to allow for an ease of software installation onto the lift truck, including the hardware. The program had in-depth knowledge of the lift truck's inner workings and required moving files to proper places, initializing scripts, and knowing when to do what. This is an <a href='https://electronjs.org/'>Electron</a> application, using a combination of <a href='https://angularjs.org/'>AngularJS</a> and <a href='http://getbootstrap.com/'>Bootstrap</a> for UI and <a href='https://nodejs.org/en/'>NodeJS</a> for package management and utilities. During my time at Crown, especially in Fall 2017, I was widely developing this program independently while still vastly exceeding the expectations of my peers. I worked to add features, support dependencies, test, and fix bugs. This program is currently being prepared for use with end-customers so they can update their own software with new features as need be.
     </p>
@@ -23,5 +16,5 @@
 </template>
 
 <script>
-export default { name: 'work-experience' }
+export default { name: 'we3' }
 </script>
