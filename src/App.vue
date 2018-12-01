@@ -16,11 +16,17 @@
         </v-card>
       </v-flex>
 
-      <body-card-image id="about" :body="aboutMe" :img="portrait"/>
+      <body-card-image id="about" :body="aboutMe" :img="portrait" position="right" :spaces="3"/>
       <download-button :file="resumeLocation"/>
 
       <body-card id="contact" :body="contactInfo"/>
-      <body-card id="work" :body="workExperience"/>
+
+      <body-card id="work" :body="workExperience1"/>
+      <body-card-image :body="workExperience2" :img="crownHQ" position="left" :spaces="0"/>
+      <body-card :body="workExperience3"/>
+      <body-card-image :body="workExperience4" :img="truck" position="right" :spaces="0"/>
+      <body-card :body="workExperience5"/>
+
       <body-card id="activities" :body="activities"/>
     </v-layout>
   </div>
@@ -35,8 +41,13 @@ import DownloadButton from './components/DownloadButton.vue'
 
 import AboutMe from './components/body-text/AboutMe.vue'
 import ContactInfo from './components/body-text/ContactInfo.vue'
-import WorkExperience from './components/body-text/WorkExperience.vue'
 import Activities from './components/body-text/Activities.vue'
+
+import WE1 from './components/body-text/WorkExperience/WE1.vue'
+import WE2 from './components/body-text/WorkExperience/WE2.vue'
+import WE3 from './components/body-text/WorkExperience/WE3.vue'
+import WE4 from './components/body-text/WorkExperience/WE4.vue'
+import WE5 from './components/body-text/WorkExperience/WE5.vue'
 
 import resume from '../public/Dustin-Seger-Resume.pdf'
 
@@ -49,7 +60,6 @@ export default {
     BodyCardImage,
     AboutMe,
     ContactInfo,
-    WorkExperience,
     Activities
   },
   data () {
@@ -86,6 +96,8 @@ export default {
       // Other assets
       resumeLocation: resume,
       portrait: require('@/assets/Dustin-Seger-Portrait.jpg'),
+      crownHQ: require('@/assets/crown-hq.jpg'),
+      truck: require('@/assets/sp-truck.png'),
 
       // Scroll behavior assets
       windowHeight: window.innerHeight,
@@ -111,8 +123,12 @@ export default {
     // Computed components required for passing as prop
     aboutMe () { return AboutMe },
     contactInfo () { return ContactInfo },
-    workExperience () { return WorkExperience },
-    activities () { return Activities }
+    activities () { return Activities },
+    workExperience1 () { return WE1 },
+    workExperience2 () { return WE2 },
+    workExperience3 () { return WE3 },
+    workExperience4 () { return WE4 },
+    workExperience5 () { return WE5 }
   },
   methods: {
     onScroll (val) {
