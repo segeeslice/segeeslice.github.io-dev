@@ -24,6 +24,8 @@
       <body-card id="work" :body="workExperience1"/>
       <body-card-image :body="workExperience2" :img="crownHQ" position="left" :spaces="0"/>
       <body-card :body="workExperience3"/>
+      <body-card-image :body="workExperience4" :img="truck" position="right" :spaces="0"/>
+      <body-card :body="workExperience5"/>
 
       <body-card id="activities" :body="activities"/>
     </v-layout>
@@ -39,10 +41,13 @@ import DownloadButton from './components/DownloadButton.vue'
 
 import AboutMe from './components/body-text/AboutMe.vue'
 import ContactInfo from './components/body-text/ContactInfo.vue'
+import Activities from './components/body-text/Activities.vue'
+
 import WE1 from './components/body-text/WorkExperience/WE1.vue'
 import WE2 from './components/body-text/WorkExperience/WE2.vue'
 import WE3 from './components/body-text/WorkExperience/WE3.vue'
-import Activities from './components/body-text/Activities.vue'
+import WE4 from './components/body-text/WorkExperience/WE4.vue'
+import WE5 from './components/body-text/WorkExperience/WE5.vue'
 
 import resume from '../public/Dustin-Seger-Resume.pdf'
 
@@ -55,9 +60,6 @@ export default {
     BodyCardImage,
     AboutMe,
     ContactInfo,
-    WE1,
-    WE2,
-    WE3,
     Activities
   },
   data () {
@@ -95,6 +97,7 @@ export default {
       resumeLocation: resume,
       portrait: require('@/assets/Dustin-Seger-Portrait.jpg'),
       crownHQ: require('@/assets/crown-hq.jpg'),
+      truck: require('@/assets/sp-truck.png'),
 
       // Scroll behavior assets
       windowHeight: window.innerHeight,
@@ -120,10 +123,12 @@ export default {
     // Computed components required for passing as prop
     aboutMe () { return AboutMe },
     contactInfo () { return ContactInfo },
+    activities () { return Activities },
     workExperience1 () { return WE1 },
     workExperience2 () { return WE2 },
     workExperience3 () { return WE3 },
-    activities () { return Activities }
+    workExperience4 () { return WE4 },
+    workExperience5 () { return WE5 }
   },
   methods: {
     onScroll (val) {
