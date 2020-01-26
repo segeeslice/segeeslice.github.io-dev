@@ -132,14 +132,19 @@ export default {
   },
   methods: {
     onScroll (val) {
-      this.lastScroll = val
+      // Parse out the top scroll from the HTML element
+      // TODO: find nicer way of doing this? (Update Vuetify)
+      let scrollTop = val.target.scrollingElement.scrollTop
+
+      this.lastScroll = scrollTop
 
       // Lower opacity to 0 when halfway down window height, then pop back up
-      let opacResult = this.opacFunction(val.pageY / this.windowHeight)
+      // TODO: Modify to change on each subsection?
+      let opacResult = this.opacFunction(scrollTop / this.windowHeight)
       this.changeOpacity(opacResult)
 
       // Change background when opacity is 0
-      this.changeBackground(Math.floor(val.pageY / this.windowHeight + 0.5))
+      this.changeBackground(Math.floor(scrollTop / this.windowHeight + 0.5))
     },
     opacFunction (val) {
       // Cosine graph with range [0, 1] and domain [0, 1] is:
