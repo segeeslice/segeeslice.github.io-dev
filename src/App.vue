@@ -16,6 +16,24 @@
         </v-card>
       </v-flex>
 
+      <!-- Temporary warning until release -->
+      <!-- TODO: Remove once TODO is exhausted -->
+
+      <body-card v-if="showAlert">
+        <v-alert height="400px" outline v-model="showAlert" dismissible type="warning">
+          <p>
+            This site info is not up-to-date! I've done a lot of cool things since the last
+            update here over a year ago, and I'm working hard to get this fixed up as soon
+            as possible. In the meantime, check out my
+            <a href="https://www.linkedin.com/in/dustin-seger-19972016/">LinkedIn</a>
+            for more recent info.
+          </p>
+          <p>
+            - Dustin Seger
+          </p>
+        </v-alert>
+      </body-card>
+
       <!-- About me -->
       <body-card-image id="about" :body="aboutMe" :img="portrait" position="right" :spaces="3"/>
       <download-button :file="resumeLocation"/>
@@ -85,6 +103,7 @@ export default {
   },
   data () {
     return {
+      showAlert: true, // TODO: remove after release
       // Style details
       baseStyle: {
         backgroundRepeat: 'no-repeat',
