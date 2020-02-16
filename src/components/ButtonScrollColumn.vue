@@ -10,8 +10,8 @@
     <a
       v-for="(item, index) in items"
       :key="item.id"
-      :href = "`#${item.id}`"
-      :v-scroll-to="item.id"
+      href="#"
+      v-scroll-to="`#${item.id}`"
     >
       <v-tooltip left nudge-bottom="13">
         <v-btn

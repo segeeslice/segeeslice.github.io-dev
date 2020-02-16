@@ -5,10 +5,10 @@
 
     <button-scroll-column :items="scrollItems"/>
 
-    <!-- Main body -->
     <v-layout row wrap>
+      <!-- Landing area -->
       <v-flex xs12>
-        <v-card flat :class="['faded', 'text-xs-center']" height="100vh">
+        <v-card id="top" flat :class="['faded', 'text-xs-center']" height="100vh">
           <div class="white-text" style="padding-top:40vh;">
             <h1>Dustin Seger</h1>
             <h3>Computer science student</h3>
@@ -16,17 +16,21 @@
         </v-card>
       </v-flex>
 
+      <!-- About me -->
       <body-card-image id="about" :body="aboutMe" :img="portrait" position="right" :spaces="3"/>
       <download-button :file="resumeLocation"/>
 
+      <!-- Contact info -->
       <body-card id="contact" :body="contactInfo"/>
 
+      <!-- Work experience -->
       <body-card id="work" :body="workExperience1"/>
       <body-card-image :body="workExperience2" :img="crownHQ" position="left" :spaces="0"/>
       <body-card :body="workExperience3"/>
       <body-card-image :body="workExperience4" :img="truck" position="right" :spaces="0"/>
       <body-card :body="workExperience5"/>
 
+      <!-- Activities -->
       <body-card id="activities" :body="activities"/>
     </v-layout>
   </div>
