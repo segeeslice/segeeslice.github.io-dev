@@ -5,10 +5,10 @@
 
     <button-scroll-column :items="scrollItems"/>
 
-    <!-- Main body -->
     <v-layout row wrap>
+      <!-- Landing area -->
       <v-flex xs12>
-        <v-card flat :class="['faded', 'text-xs-center']" height="100vh">
+        <v-card id="top" flat :class="['faded', 'text-xs-center']" height="100vh">
           <div class="white-text" style="padding-top:40vh;">
             <h1>Dustin Seger</h1>
             <h3>Computer science student</h3>
@@ -16,18 +16,52 @@
         </v-card>
       </v-flex>
 
+      <!-- Temporary warning until release -->
+      <!-- TODO: Remove once TODO is exhausted -->
+
+      <body-card v-if="showAlert">
+        <v-alert height="400px" outline v-model="showAlert" dismissible type="warning">
+          <p>
+            This site info is not up-to-date! I've done a lot of cool things since the last
+            update here over a year ago, and I'm working hard to get this fixed up as soon
+            as possible. In the meantime, check out my
+            <a href="https://www.linkedin.com/in/dustin-seger-19972016/">LinkedIn</a>
+            for more recent info.
+          </p>
+          <p>
+            - Dustin Seger
+          </p>
+        </v-alert>
+      </body-card>
+
+      <!-- About me -->
       <body-card-image id="about" :body="aboutMe" :img="portrait" position="right" :spaces="3"/>
       <download-button :file="resumeLocation"/>
 
-      <body-card id="contact" :body="contactInfo"/>
+      <!-- Contact info -->
+      <body-card id="contact">
+        <contact-info/>
+      </body-card>
 
-      <body-card id="work" :body="workExperience1"/>
-      <body-card-image :body="workExperience2" :img="crownHQ" position="left" :spaces="0"/>
-      <body-card :body="workExperience3"/>
-      <body-card-image :body="workExperience4" :img="truck" position="right" :spaces="0"/>
-      <body-card :body="workExperience5"/>
+      <!-- Work experience -->
+      <div id="work">
+        <body-card>
+          <we1/>
+        </body-card>
+        <body-card-image :body="workExperience2" :img="crownHQ" position="left" :spaces="0"/>
+        <body-card>
+          <we3/>
+        </body-card>
+        <body-card-image :body="workExperience4" :img="truck" position="right" :spaces="0"/>
+        <body-card>
+          <we5/>
+        </body-card>
+      </div>
 
-      <body-card id="activities" :body="activities"/>
+      <!-- Activities -->
+      <body-card id="activities">
+        <activities/>
+      </body-card>
     </v-layout>
   </div>
   <!--TODO: Footer?-->
@@ -60,10 +94,16 @@ export default {
     BodyCardImage,
     AboutMe,
     ContactInfo,
-    Activities
+    Activities,
+    'we1': WE1,
+    'we2': WE2,
+    'we3': WE3,
+    'we4': WE4,
+    'we5': WE5
   },
   data () {
     return {
+      showAlert: true, // TODO: remove after release
       // Style details
       baseStyle: {
         backgroundRepeat: 'no-repeat',
