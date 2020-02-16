@@ -17,8 +17,11 @@
         - Investigate super quick scrolling to final item?
 
 - **Refactors**
-    - Use slots in `BodyCard`
+    - ~~Use slots in `BodyCard`~~
+    - Use slots in `BodyCardImage` (may need to update Vue)
+    - Combine `body-card` and `body-card-image`?
     - Refactor button row to use relative positioning and padding?
+    - Rename work experience things
 
 - **Updates**
     - Update Vue if necessary

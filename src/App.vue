@@ -21,17 +21,29 @@
       <download-button :file="resumeLocation"/>
 
       <!-- Contact info -->
-      <body-card id="contact" :body="contactInfo"/>
+      <body-card id="contact">
+        <contact-info/>
+      </body-card>
 
       <!-- Work experience -->
-      <body-card id="work" :body="workExperience1"/>
-      <body-card-image :body="workExperience2" :img="crownHQ" position="left" :spaces="0"/>
-      <body-card :body="workExperience3"/>
-      <body-card-image :body="workExperience4" :img="truck" position="right" :spaces="0"/>
-      <body-card :body="workExperience5"/>
+      <div id="work">
+        <body-card>
+          <we1/>
+        </body-card>
+        <body-card-image :body="workExperience2" :img="crownHQ" position="left" :spaces="0"/>
+        <body-card>
+          <we3/>
+        </body-card>
+        <body-card-image :body="workExperience4" :img="truck" position="right" :spaces="0"/>
+        <body-card>
+          <we5/>
+        </body-card>
+      </div>
 
       <!-- Activities -->
-      <body-card id="activities" :body="activities"/>
+      <body-card id="activities">
+        <activities/>
+      </body-card>
     </v-layout>
   </div>
   <!--TODO: Footer?-->
@@ -64,7 +76,12 @@ export default {
     BodyCardImage,
     AboutMe,
     ContactInfo,
-    Activities
+    Activities,
+    'we1': WE1,
+    'we2': WE2,
+    'we3': WE3,
+    'we4': WE4,
+    'we5': WE5
   },
   data () {
     return {
