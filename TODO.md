@@ -4,14 +4,15 @@
 
 - **Content overhaul**
     - Update text portions
-        - About me
+        - ~~About me~~
+        - ~~Contact info~~ *(See below)*
         - Activities
-        - Contact info
         - Work experience
     - Update profile picture
     - Update resume link
     - Add snake project (+ remove others?)
         - Add snake portfolio!
+    - Add social media links via icons to contact info
 
 - **Background/scrolling overhaul**
     1. ~~Fix scrolling to use `v-scrollto` with animations~~
