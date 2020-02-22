@@ -21,10 +21,12 @@
     1. Optional
         - Investigate super quick scrolling to final item?
 
+- **Update text to better wrap around images**
+
 - **Refactors**
     - ~~Use slots in `BodyCard`~~
     - Use slots in `BodyCardImage` (may need to update Vue)
-    - Combine `body-card` and `body-card-image`?
+    - Combine `body-card` and `body-card-image` with common slots
     - Refactor button row to use relative positioning and padding?
     - Rename work experience things
 
