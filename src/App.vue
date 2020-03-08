@@ -35,7 +35,10 @@
       </body-card>
 
       <!-- About me -->
-      <body-card-image id="about" :body="aboutMe" :img="portrait" position="right" :spaces="3"/>
+      <body-card>
+        <h2>About Me</h2>
+      </body-card>
+      <body-card-image id="about" :body="aboutMe" :img="portrait" position="right"/>
       <download-button :file="resumeLocation"/>
 
       <!-- Contact info -->
@@ -46,13 +49,13 @@
       <!-- Work experience -->
       <div id="work">
         <body-card>
-          <we1/>
+          <h2>Work Activities</h2>
         </body-card>
-        <body-card-image :body="workExperience2" :img="crownHQ" position="left" :spaces="0"/>
+        <body-card-image :body="workExperience2" :img="crownHQ" position="left"/>
         <body-card>
           <we3/>
         </body-card>
-        <body-card-image :body="workExperience4" :img="truck" position="right" :spaces="0"/>
+        <body-card-image :body="workExperience4" :img="truck" position="right"/>
         <body-card>
           <we5/>
         </body-card>
@@ -77,7 +80,6 @@ import AboutMe from './components/body-text/AboutMe.vue'
 import ContactInfo from './components/body-text/ContactInfo.vue'
 import Activities from './components/body-text/Activities.vue'
 
-import WE1 from './components/body-text/WorkExperience/WE1.vue'
 import WE2 from './components/body-text/WorkExperience/WE2.vue'
 import WE3 from './components/body-text/WorkExperience/WE3.vue'
 import WE4 from './components/body-text/WorkExperience/WE4.vue'
@@ -95,7 +97,6 @@ export default {
     AboutMe,
     ContactInfo,
     Activities,
-    'we1': WE1,
     'we2': WE2,
     'we3': WE3,
     'we4': WE4,

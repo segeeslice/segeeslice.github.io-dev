@@ -12,7 +12,6 @@
     <v-card class="faded" flat>
       <v-layout row>
         <v-flex v-if="left" sm3 offset-md1 md3 offset-lg2 lg2>
-          <br v-for="index in spaces" :key="index"/>
           <v-card-text>
             <v-img :src="img" :gradient="imgGradient"/>
           </v-card-text>
@@ -31,7 +30,6 @@
         </v-flex>
 
         <v-flex v-if="right || neither" sm3 md3 lg2>
-          <br v-for="index in spaces" :key="index"/>
           <v-card-text>
             <v-img :src="img" :gradient="imgGradient"/>
           </v-card-text>
@@ -45,7 +43,7 @@
 <script>
 export default {
   name: 'body-card-image',
-  props: [ 'body', 'img', 'position', 'spaces' ],
+  props: [ 'body', 'img', 'position' ],
   data () {
     return {
       imgGradient: 'to top right, rgba(255,115,201,.2), rgba(25,32,72,.2)'

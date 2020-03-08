@@ -26,6 +26,7 @@
 
 - **Refactors**
     - ~~Use slots in `BodyCard`~~
+    - ~~Remove "spaces" usage in `BodyCardImage`~~
     - Use slots in `BodyCardImage` (may need to update Vue)
     - Combine `body-card` and `body-card-image` with common slots
     - Refactor button row to use relative positioning and padding?

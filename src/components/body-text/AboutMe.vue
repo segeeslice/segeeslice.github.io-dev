@@ -1,6 +1,5 @@
 <template>
   <div>
-    <h2>About Me</h2>
     <p>
       My name is Dustin Seger. I'm a computer science major at
       the University of Cincinnati (UC), slated to graduate Spring 2021. I'm also
