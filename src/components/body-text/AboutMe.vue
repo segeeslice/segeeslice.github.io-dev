@@ -22,11 +22,9 @@
     </p>
     <p>
       After I get my degree, I'm interested in a career in software engineering and
-      <!-- TODO: add link -->
       development, and I aspire to one day be a software project leader.
-      <i>(See the <b>end of my work experience</b> for more career aspiration specifics)</i>
     </p>
-    <v-divider dark/>
+    <v-divider dark class="pb-2"/>
     <h3>My Current Status</h3>
     <p>
       I am currently on co-op with Crown in Feldkirchen, Germany until August 2020.

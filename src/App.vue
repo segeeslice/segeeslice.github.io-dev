@@ -35,10 +35,10 @@
       </body-card>
 
       <!-- About me -->
-      <body-card>
+      <body-card id="about">
         <h2>About Me</h2>
       </body-card>
-      <body-card-image id="about" :body="aboutMe" :img="portrait" position="right"/>
+      <body-card-image :body="aboutMe" :img="portrait" position="right"/>
       <download-button :file="resumeLocation"/>
 
       <!-- Contact info -->
@@ -49,16 +49,9 @@
       <!-- Work experience -->
       <div id="work">
         <body-card>
-          <h2>Work Activities</h2>
+          <h2>Work Experience</h2>
         </body-card>
-        <body-card-image :body="workExperience2" :img="crownHQ" position="left"/>
-        <body-card>
-          <we3/>
-        </body-card>
-        <body-card-image :body="workExperience4" :img="truck" position="right"/>
-        <body-card>
-          <we5/>
-        </body-card>
+        <work-experience/>
       </div>
 
       <!-- Activities -->
@@ -80,27 +73,20 @@ import AboutMe from './components/body-text/AboutMe.vue'
 import ContactInfo from './components/body-text/ContactInfo.vue'
 import Activities from './components/body-text/Activities.vue'
 
-import WE2 from './components/body-text/WorkExperience/WE2.vue'
-import WE3 from './components/body-text/WorkExperience/WE3.vue'
-import WE4 from './components/body-text/WorkExperience/WE4.vue'
-import WE5 from './components/body-text/WorkExperience/WE5.vue'
-
+import WorkExperience from './components/body-text/WorkExperience'
 import resume from '../public/Dustin-Seger-Resume.pdf'
 
 export default {
   name: 'app',
   components: {
-    ButtonScrollColumn,
-    BodyCard,
-    DownloadButton,
-    BodyCardImage,
     AboutMe,
-    ContactInfo,
     Activities,
-    'we2': WE2,
-    'we3': WE3,
-    'we4': WE4,
-    'we5': WE5
+    BodyCard,
+    BodyCardImage,
+    ButtonScrollColumn,
+    ContactInfo,
+    DownloadButton,
+    WorkExperience
   },
   data () {
     return {
@@ -164,12 +150,7 @@ export default {
     // Computed components required for passing as prop
     aboutMe () { return AboutMe },
     contactInfo () { return ContactInfo },
-    activities () { return Activities },
-    workExperience1 () { return WE1 },
-    workExperience2 () { return WE2 },
-    workExperience3 () { return WE3 },
-    workExperience4 () { return WE4 },
-    workExperience5 () { return WE5 }
+    activities () { return Activities }
   },
   methods: {
     onScroll (val) {
