@@ -6,8 +6,8 @@
     - Update text portions
         - ~~About me~~
         - ~~Contact info~~ *(See below)*
-        - Activities
         - Work experience
+        - Activities
     - Update profile picture
     - Update resume link
     - Add snake project (+ remove others?)
@@ -27,6 +27,8 @@
 - **Refactors**
     - ~~Use slots in `BodyCard`~~
     - ~~Remove "spaces" usage in `BodyCardImage`~~
+    - `BodyCardImage` position var to separate bools
+    - Move alert to own component in case I want to use it later
     - Use slots in `BodyCardImage` (may need to update Vue)
     - Combine `body-card` and `body-card-image` with common slots
     - Refactor button row to use relative positioning and padding?

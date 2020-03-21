@@ -69,11 +69,11 @@ import BodyCard from './components/BodyCard.vue'
 import BodyCardImage from './components/BodyCardImage.vue'
 import DownloadButton from './components/DownloadButton.vue'
 
-import AboutMe from './components/body-text/AboutMe.vue'
-import ContactInfo from './components/body-text/ContactInfo.vue'
-import Activities from './components/body-text/Activities.vue'
+import AboutMe from './components/BodyText/AboutMe.vue'
+import ContactInfo from './components/BodyText/ContactInfo.vue'
+import Activities from './components/BodyText/Activities.vue'
 
-import WorkExperience from './components/body-text/WorkExperience'
+import WorkExperience from './components/BodyText/WorkExperience'
 import resume from '../public/Dustin-Seger-Resume.pdf'
 
 export default {
@@ -211,6 +211,7 @@ h3 {
 }
 p {
   font-size: 18px;
+  font-weight: 350;
 }
 a {
   color: white;
