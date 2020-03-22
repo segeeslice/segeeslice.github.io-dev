@@ -217,5 +217,6 @@ p {
 }
 a {
   color: white;
+  font-weight: 500;
 }
 </style>
