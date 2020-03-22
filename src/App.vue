@@ -17,22 +17,24 @@
       </v-flex>
 
       <!-- Temporary warning until release -->
-      <!-- TODO: Remove once TODO is exhausted -->
+      <!-- TODO: Remove once TODO.md is exhausted -->
 
-      <body-card v-if="showAlert">
-        <v-alert height="400px" outline v-model="showAlert" dismissible type="warning">
-          <p>
-            This site info is not up-to-date! I've done a lot of cool things since the last
-            update here over a year ago, and I'm working hard to get this fixed up as soon
-            as possible. In the meantime, check out my
-            <a href="https://www.linkedin.com/in/dustin-seger-19972016/">LinkedIn</a>
-            for more recent info.
-          </p>
-          <p>
-            - Dustin Seger
-          </p>
-        </v-alert>
-      </body-card>
+      <alert
+        dismissible
+        :show="showAlert"
+        @dismissed="showAlert = false"
+      >
+        <p>
+          This site info is not up-to-date! I've done a lot of cool things since the last
+          update here over a year ago, and I'm working hard to get this fixed up as soon
+          as possible. In the meantime, check out my
+          <a href="https://www.linkedin.com/in/dustin-seger-19972016/">LinkedIn</a>
+          for more recent info.
+        </p>
+        <p>
+          - Dustin Seger
+        </p>
+      </alert>
 
       <!-- About me -->
       <body-card id="about">
@@ -66,16 +68,17 @@
 </template>
 
 <script>
-import ButtonScrollColumn from './components/ButtonScrollColumn.vue'
-import BodyCard from './components/BodyCard.vue'
-import BodyCardImage from './components/BodyCardImage.vue'
-import DownloadButton from './components/DownloadButton.vue'
+import Alert from './components/Alert'
+import ButtonScrollColumn from './components/ButtonScrollColumn'
+import BodyCard from './components/BodyCard'
+import BodyCardImage from './components/BodyCardImage'
+import DownloadButton from './components/DownloadButton'
 
-import AboutMe from './components/BodyText/AboutMe.vue'
-import ContactInfo from './components/BodyText/ContactInfo.vue'
-import Activities from './components/BodyText/Activities.vue'
-
+import AboutMe from './components/BodyText/AboutMe'
+import ContactInfo from './components/BodyText/ContactInfo'
+import Activities from './components/BodyText/Activities'
 import WorkExperience from './components/BodyText/WorkExperience'
+
 import resume from '../public/Dustin-Seger-Resume.pdf'
 
 export default {
@@ -83,6 +86,7 @@ export default {
   components: {
     AboutMe,
     Activities,
+    Alert,
     BodyCard,
     BodyCardImage,
     ButtonScrollColumn,
