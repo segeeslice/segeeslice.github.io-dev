@@ -25,7 +25,7 @@
 
         <v-flex v-if="right" sm8 offset-md1 md7 offset-lg2 lg6>
           <v-card-text class="white-text">
-            <component :is="body"/>
+            <slot/>
           </v-card-text>
         </v-flex>
 

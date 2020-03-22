@@ -38,7 +38,9 @@
       <body-card id="about">
         <h2>About Me</h2>
       </body-card>
-      <body-card-image :body="aboutMe" :img="portrait" position="right"/>
+      <body-card-image :img="portrait" position="right">
+        <about-me/>
+      </body-card-image>
       <download-button :file="resumeLocation"/>
 
       <!-- Contact info -->
