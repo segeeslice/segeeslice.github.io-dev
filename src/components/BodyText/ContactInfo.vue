@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <body-card>
     <h2>Contact Info</h2>
     <!-- Wrap in p tag to keep same format as rest of app -->
     <p>
@@ -24,11 +24,16 @@
     </p>
 
     <!-- TODO: social media links via icons -->
-  </div>
+  </body-card>
 </template>
 
 <script>
-export default { name: 'contact-info' }
+import BodyCard from '../BodyCard'
+
+export default {
+  name: 'contact-info',
+  components: { BodyCard }
+}
 </script>
 
 <style scoped>

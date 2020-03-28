@@ -9,6 +9,7 @@
       <!-- Landing area -->
       <v-flex xs12>
         <v-card id="top" flat :class="['faded', 'text-xs-center']" height="100vh">
+          <!-- TODO: Better vertically justify -->
           <div class="white-text" style="padding-top:40vh;">
             <h1>Dustin Seger</h1>
             <h3>Computer science student</h3>
@@ -37,31 +38,17 @@
       </alert>
 
       <!-- About me -->
-      <body-card id="about">
-        <h2>About Me</h2>
-      </body-card>
-      <body-card-image :img="portrait" position="right">
-        <about-me/>
-      </body-card-image>
+      <about-me id="about"/>
       <download-button :file="resumeLocation"/>
 
       <!-- Contact info -->
-      <body-card id="contact">
-        <contact-info/>
-      </body-card>
+      <contact-info id="contact"/>
 
       <!-- Work experience -->
-      <div id="work">
-        <body-card>
-          <h2>Work Experience</h2>
-        </body-card>
-        <work-experience/>
-      </div>
+      <work-experience id="work"/>
 
       <!-- Activities -->
-      <body-card id="activities">
-        <activities/>
-      </body-card>
+      <activities id="activities"/>
     </v-layout>
   </div>
   <!--TODO: Footer?-->
@@ -70,8 +57,6 @@
 <script>
 import Alert from './components/Alert'
 import ButtonScrollColumn from './components/ButtonScrollColumn'
-import BodyCard from './components/BodyCard'
-import BodyCardImage from './components/BodyCardImage'
 import DownloadButton from './components/DownloadButton'
 
 import AboutMe from './components/BodyText/AboutMe'
@@ -87,8 +72,6 @@ export default {
     AboutMe,
     Activities,
     Alert,
-    BodyCard,
-    BodyCardImage,
     ButtonScrollColumn,
     ContactInfo,
     DownloadButton,
@@ -128,7 +111,6 @@ export default {
 
       // Other assets
       resumeLocation: resume,
-      portrait: require('@/assets/Dustin-Seger-Portrait.jpg'),
 
       // Scroll behavior assets
       windowHeight: window.innerHeight,

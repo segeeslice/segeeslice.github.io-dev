@@ -9,7 +9,7 @@
 <template>
   <div>
   <v-flex xs12>
-    <v-card class="faded" flat>
+    <v-card :class="classes" flat>
       <v-layout row>
         <v-flex v-if="left" sm3 offset-md1 md3 offset-lg2 lg2>
           <v-card-text>
@@ -50,6 +50,10 @@ export default {
       type: String,
       default: '',
       validator: x => ['left', 'right'].includes(x)
+    },
+    cardClass: {
+      type: String,
+      default: ''
     }
   },
   data () {
@@ -58,6 +62,9 @@ export default {
     }
   },
   computed: {
+    classes () {
+      return ['faded', ...this.cardClass.split(' ')]
+    },
     left () {
       return this.position === 'left'
     },

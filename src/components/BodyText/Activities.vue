@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <body-card>
     <h2>Activities</h2>
     <p>
       Many of my programming activities can be found on my <a href='https://github.com/segeeslice'>personal GitHub Page</a>. Schoolwork does come first, so I admittedly have not found much time to aptly finish these projects. However, I hope to eventually showcase most, if not all, of the concepts and languages I have learned through UC and personal studies. The <a href='https://github.com/segeeslice/Movie-Tracker'>Movie Tracker</a> and <a href='https://github.com/segeeslice/Python-GIF-Searcher'>Python GIF Searcher</a> are currently my most notable projects. Although they are not packaged for consumer use, below you can view demos of both.
@@ -17,14 +17,16 @@
     <p>
       With a current standing 4.0 GPA, I have been on Dean's List every semester at UC. I also recently turned in an essay on music writing as a literacy that will be entered into a writing competition in January 2019, potentially being published if it is well received.
     </p>
-  </div>
+  </body-card>
 </template>
 
 <script>
+import BodyCard from '../BodyCard.vue'
 import ExpansionVideo from '../ExpansionVideo.vue'
+
 export default {
   name: 'activities',
-  components: { ExpansionVideo },
+  components: { BodyCard, ExpansionVideo },
   data () {
     return {
       demos: [

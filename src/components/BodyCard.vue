@@ -1,6 +1,6 @@
 <template>
   <v-flex xs12>
-    <v-card flat class="faded">
+    <v-card flat :class="classes">
       <v-flex sm11 md10 offset-md1 lg8 offset-lg2>
         <v-card-text class="white-text">
           <slot/>
@@ -13,6 +13,16 @@
 <script>
 export default {
   name: 'body-card',
-  props: [ 'body' ]
+  props: {
+    cardClass: {
+      type: String,
+      default: ''
+    }
+  },
+  computed: {
+    classes () {
+      return ['faded', ...this.cardClass.split(' ')]
+    }
+  }
 }
 </script>

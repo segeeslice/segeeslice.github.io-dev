@@ -1,5 +1,10 @@
 <template>
   <div>
+    <!-- TODO: Update padding between title and body -->
+    <body-card>
+      <h2>Work Experience</h2>
+    </body-card>
+
     <body-card>
       <h3>About Crown</h3>
       <p>
@@ -14,6 +19,7 @@
       <v-divider dark class="pb-2"/>
       <h3>Past Internships With Crown</h3>
     </body-card>
+
     <body-card-image :img="images.crownHq" position="right">
       <p>
         In Fall 2017 and Summer 2018, I worked on a project aimed at adding touch-screen

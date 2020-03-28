@@ -6,7 +6,7 @@
     - Update text portions
         - ~~About me~~
         - ~~Contact info~~ *(See below)*
-        - Work experience
+        - ~~Work experience~~
         - Activities
     - Update profile picture
     - Update resume link
@@ -39,4 +39,5 @@
 - **Updates**
     - Update Vue if necessary
     - Get the Vuetify 2.x update
+      - Update bodycard/bodycardimage to use alignment helpers (e.g. pb-0, etc)
 
