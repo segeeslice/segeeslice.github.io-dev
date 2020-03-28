@@ -24,6 +24,8 @@
 
 - **Update text to better wrap around images**
 
+- **Remove/move images depending on screen size**
+
 - **Refactors**
     - ~~Use slots in `BodyCard`~~
     - ~~Remove "spaces" usage in `BodyCardImage`~~

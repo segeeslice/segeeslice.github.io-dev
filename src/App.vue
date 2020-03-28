@@ -129,8 +129,6 @@ export default {
       // Other assets
       resumeLocation: resume,
       portrait: require('@/assets/Dustin-Seger-Portrait.jpg'),
-      crownHQ: require('@/assets/crown-hq.jpg'),
-      truck: require('@/assets/sp-truck.png'),
 
       // Scroll behavior assets
       windowHeight: window.innerHeight,

@@ -2,8 +2,8 @@
   Adds an image to a passed body component
 
   Props:
-    - body = Vue component to display alongside image
-    - img  = image path
+    - img = image source object
+    - position = left/right; indicates image position
 -->
 
 <template>
@@ -17,13 +17,11 @@
           </v-card-text>
         </v-flex>
 
-        <v-flex v-if="left" sm8 md7 lg6>
-          <v-card-text class="white-text">
-            <component :is="body"/>
-          </v-card-text>
-        </v-flex>
-
-        <v-flex v-if="right" sm8 offset-md1 md7 offset-lg2 lg6>
+        <v-flex
+          sm8 lg6 md7
+          :offset-md1="right"
+          :offset-lg2="right"
+        >
           <v-card-text class="white-text">
             <slot/>
           </v-card-text>
@@ -43,7 +41,17 @@
 <script>
 export default {
   name: 'body-card-image',
-  props: [ 'body', 'img', 'position' ],
+  props: {
+    img: {
+      type: String,
+      default: ''
+    },
+    position: {
+      type: String,
+      default: '',
+      validator: x => ['left', 'right'].includes(x)
+    }
+  },
   data () {
     return {
       imgGradient: 'to top right, rgba(255,115,201,.2), rgba(25,32,72,.2)'

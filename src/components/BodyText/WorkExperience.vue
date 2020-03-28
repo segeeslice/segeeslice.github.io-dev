@@ -12,11 +12,13 @@
       </p>
 
       <v-divider dark class="pb-2"/>
-      <h3>Past Experiences With Crown</h3>
+      <h3>Past Internships With Crown</h3>
+    </body-card>
+    <body-card-image :img="images.crownHq" position="right">
       <p>
         In Fall 2017 and Summer 2018, I worked on a project aimed at adding touch-screen
         devices to Crown's trademark lift trucks. With roughly 3 years of development
-        already behind the project, I was able to dive head first into programming alongside
+        already behind the project, I was able to dive head-first into programming alongside
         veterans of the field. During this time, I was primary developer of the project's new
         development utilities, aimed to help download to and manage data for the lift trucks.
         These programs are essentially executable web pages, operating under
@@ -28,6 +30,8 @@
         Of course, I also did various other tasks as necessary, including C++ coding for the
         touch screen itself, QA work, and field testing on a manufacturing line.
       </p>
+    </body-card-image>
+    <body-card-image :img="images.spTruck" position="left">
       <p>
         In the following co-op rotation of Summer 2019, I moved to a project aimed at creating
         a successor to the original lift truck touch screen. This new project arose from the
@@ -41,7 +45,9 @@
         to love C#, although I haven't had the chance to develop with it since. During this
         rotation, I also utilized other familiar languages, such as Python and C++.
       </p>
+    </body-card-image>
 
+    <body-card>
       <v-divider dark class="pb-2"/>
       <h3>Current Work</h3>
       <p>
@@ -64,6 +70,14 @@ import BodyCardImage from '../BodyCardImage.vue'
 
 export default {
   name: 'we2',
-  components: { BodyCard }
+  components: { BodyCard, BodyCardImage },
+  data () {
+    return {
+      images: {
+        crownHq: require('@/assets/crown-hq.jpg'),
+        spTruck: require('@/assets/sp-truck.png')
+      }
+    }
+  }
 }
 </script>
