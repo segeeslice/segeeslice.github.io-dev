@@ -39,7 +39,6 @@
 
       <!-- About me -->
       <about-me id="about"/>
-      <download-button :file="resumeLocation"/>
 
       <!-- Contact info -->
       <contact-info id="contact"/>
@@ -57,14 +56,11 @@
 <script>
 import Alert from './components/Alert'
 import ButtonScrollColumn from './components/ButtonScrollColumn'
-import DownloadButton from './components/DownloadButton'
 
 import AboutMe from './components/BodyText/AboutMe'
 import ContactInfo from './components/BodyText/ContactInfo'
 import Activities from './components/BodyText/Activities'
 import WorkExperience from './components/BodyText/WorkExperience'
-
-import resume from '../public/Dustin-Seger-Resume.pdf'
 
 export default {
   name: 'app',
@@ -74,7 +70,6 @@ export default {
     Alert,
     ButtonScrollColumn,
     ContactInfo,
-    DownloadButton,
     WorkExperience
   },
   data () {
@@ -108,9 +103,6 @@ export default {
         { id: 'work', icon: 'work', tip: 'Work experience' },
         { id: 'activities', icon: 'person', tip: 'Personal activities' }
       ],
-
-      // Other assets
-      resumeLocation: resume,
 
       // Scroll behavior assets
       windowHeight: window.innerHeight,

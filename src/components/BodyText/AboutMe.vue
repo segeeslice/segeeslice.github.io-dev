@@ -33,13 +33,15 @@
       </p>
     </body-card-image>
 
-
-    <body-card class="mt-0">
+    <body-card>
       <h3>My Current Status</h3>
       <p>
         I am currently on co-op with Crown in Feldkirchen, Germany until August 2020.
         <b>Job opportunities are welcome</b> following my graduation in May 2021.
       </p>
+      <download-button :file="resumeFile">
+        Download My Resume
+      </download-button>
     </body-card>
   </div>
 </template>
@@ -47,13 +49,15 @@
 <script>
 import BodyCard from '../BodyCard'
 import BodyCardImage from '../BodyCardImage'
+import DownloadButton from '../DownloadButton'
 
 export default {
   name: 'about-me',
-  components: { BodyCard, BodyCardImage },
+  components: { BodyCard, BodyCardImage, DownloadButton },
   data () {
     return {
-      portrait: require('@/assets/Dustin-Seger-Portrait.jpg')
+      portrait: require('@/assets/Dustin-Seger-Portrait.jpg'),
+      resumeFile: require('@/../public/Dustin-Seger-Resume.pdf')
     }
   }
 }

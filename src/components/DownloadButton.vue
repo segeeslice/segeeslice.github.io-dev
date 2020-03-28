@@ -1,19 +1,13 @@
 <template>
-  <v-flex xs12>
-    <!-- Use card and text to match padding -->
-    <v-card flat class="faded">
-      <v-card-text>
-        <v-flex sm12 md10 offset-md1 lg8 offset-lg2>
-          <a :href="file" download>
-            <v-btn dark outline>
-              <v-icon left dark>cloud_download</v-icon>
-              Download My Resume
-            </v-btn>
-          </a>
-        </v-flex>
-      </v-card-text>
-    </v-card>
-  </v-flex>
+  <!-- Div wrap to take in style bindings appropriately -->
+  <div>
+    <a :href="file" download>
+      <v-btn dark outline style="margin: 8px 0px 8px 0px;">
+        <v-icon left dark>cloud_download</v-icon>
+        <slot>Download</slot>
+      </v-btn>
+    </a>
+  </div>
 </template>
 
 <script>
