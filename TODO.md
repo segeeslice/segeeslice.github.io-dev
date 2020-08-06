@@ -7,7 +7,7 @@
         - ~~About me~~
         - ~~Contact info~~ *(See below)*
         - ~~Work experience~~
-        - Activities
+        - ~~Activities~~
     - Update profile picture
     - Update resume link
     - Add snake project (+ remove others?)

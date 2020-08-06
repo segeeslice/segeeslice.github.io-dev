@@ -31,14 +31,16 @@
       </download-button>
 
       <p>
-        I have other software projects in the works as well. For example, I'm creating the
-        <a href='https://github.com/segeeslice/Movie-Tracker'>Movie Tracker</a>, a Material-UI Electron app
-        for tracking movies to watch. This was sprung from the idea of staying organized in the
-        ever-expanding pool of streaming services. I also created the project
-        <a href='https://github.com/segeeslice/Text-Adventure'>Text Adventure</a>, a Processing
-        application acting as a framework for creating/playing your own text adventures. Although both
-        of these applications are incomplete, I hope to return to and finish them in the coming
-        year. In the meantime, you can see demos of their progress below!
+        I have other software projects in the works as well. For example, I'm
+        creating the <a href='https://github.com/segeeslice/Movie-Tracker'>Movie
+        Tracker</a>, a Material-UI Electron app for tracking movies to watch.
+        This was sprung from the idea of staying organized in the ever-expanding
+        pool of streaming services. I also created the project <a
+        href='https://github.com/segeeslice/Text-Adventure'>Text Adventure</a>,
+        a Processing application acting as a framework for creating/playing your
+        own text adventures. Although both of these applications are incomplete,
+        I hope to return to and finish them in the coming year. In the meantime,
+        you can see demos of their progress below!
       </p>
 
       <h3 style="padding-bottom: 8px">Program Demos</h3>
@@ -52,27 +54,35 @@
 
       <h3>Other Activities</h3>
       <p>
-        Naturally, I have other hobbies and interests outside of programming.
-        I love to practice and write music, travel, play ultimate with friends,
-        work out, and play video games. I've also recently began to learn 3D modeling, as I hope to
-        eventually utilize it in personal gaming projects. I am interested in Germany and German studies,
-        going so far as to live there for 8 straight months. This interest also dips into my personal
-        time with active German language practice, as I find high value in being bilingual. I'm currently
-        around a B2 German speaking level, but I hope to one day be fluent in the language.
+        Naturally, I have other hobbies and interests outside of programming. I
+        love to practice and write music, draw, travel, play ultimate with
+        friends, work out, and play video games. I've also recently began
+        investigating into the world of game development, beginning a personal
+        study of making a game totally from scratch. I am interested in Germany
+        and German studies, going so far as to live there for 8 straight months.
+        This interest also dips into my personal time with active German
+        language practice, as I find high value in being bilingual. I'm
+        currently around a B2 German speaking level, but I hope to one day be
+        fluent in the language.
       </p>
 
       <h3>University Activities/Accomplishments</h3>
       <p>
-        Outside of personal interest, I've also had my share of success through my university.
-        I've been vice president of the UC Amateur Radio Club for 3 years, as well as a member of other clubs such as
-        <a href="https://twloha.com/">TWLOHA</a>. Through UC, I've been able to volunteer 60+ hours
-        with various local organizations, such as a community fundraising concert and the well-known
-        <a href="https://www.cleanupcincy.com/">Clean Up Cincy</a> event.
-        With a current standing 4.0 GPA, I have been on Dean's List every semester at UC. My discipline goes
-        beyond grades and the tech field, as I've I written an essay that was nominated by my professor into
-        a university writing competition in January 2019. Going into my final year, I hope to continue
-        this path of success, finding challenging classes to further develop my technical skills while
-        creating a senior capstone project that I am proud of.
+        Outside of strictly my personal life, I've also had my share of success
+        through my university. I've been vice president of the UC Amateur Radio
+        Club for 4 years, as well as a member of other clubs such as <a
+        href="https://twloha.com/">TWLOHA</a>. Through UC, I've been able to
+        volunteer 60+ hours with various local organizations, such as a
+        community fundraising concert and the well-known <a
+        href="https://www.cleanupcincy.com/">Clean Up Cincy</a> event. With a
+        current standing 4.0 GPA, I have been on Dean's List every semester at
+        UC, as well as receiving the Mantei/Mae award for academic
+        accomplishment. My discipline goes beyond grades and the tech field, as
+        I've I written an essay that was nominated by my professor into a
+        university writing competition in January 2019. Going into my final
+        year, I hope to continue this path of success, finding challenging
+        classes to further develop my technical skills while preparing myself
+        for my career to come.
       </p>
     </body-card>
   </div>

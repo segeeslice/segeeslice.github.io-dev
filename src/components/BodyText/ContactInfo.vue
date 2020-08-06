@@ -24,6 +24,7 @@
     </p>
 
     <!-- TODO: social media links via icons -->
+    <!-- TODO: OR.. make note about separation of social media and professional life -->
   </body-card>
 </template>
 

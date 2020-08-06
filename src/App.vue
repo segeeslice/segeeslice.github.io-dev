@@ -124,11 +124,6 @@ export default {
     dynamicBackground () {
       return Object.assign(this.baseStyle, { backgroundImage: 'url(' + require(`${this.backgrounds[this.backgroundIndex]}`) + ')' })
     },
-
-    // Computed components required for passing as prop
-    aboutMe () { return AboutMe },
-    contactInfo () { return ContactInfo },
-    activities () { return Activities }
   },
   methods: {
     onScroll (val) {

@@ -54,17 +54,19 @@
     </body-card-image>
 
     <body-card>
-      <v-divider dark class="pb-2"/>
-      <h3>Current Work</h3>
       <p>
-        At the time of writing (March 2020), I am working in Munich, developing for Crown's German
-        branch. I'm proud to say that my aforementioned development utilities are still being used.
-        I am now developing one of these tools further, although I do anticipate a greater variety
-        of work soon. However, my journey here is not all about technical improvement. Being in
-        this new environment has already challenged nearly every facet of my daily life, and I
-        will use this unique opportunity to refine my personal aspirations, emotional intelligence,
-        and development processes. I will remain here until August 2020 for my final two co-op
-        semesters before returning to the US to finish my last year of schooling.
+        I've recently (August 2020) finished working in Munich, developing for
+        Crown's German branch. I'm proud to say that my aforementioned
+        development utilities were still being used, and I was able to develop
+        them further than ever thought possible, working to phase out every old,
+        unmaintained Excel utilities we had in place. I then went on in my final
+        weeks to help start the beginning of a new truck, leading the design in
+        CAN communications and display menu structure for the new system.
+        However, my journey here was not all about technical improvement. Being
+        in this new environment challenged nearly every facet of my daily life.
+        Through this unique opportunity, I was able to identify and work on my
+        weaknesses, as well as refine my personal aspirations, emotional
+        intelligence, and development processes.
       </p>
     </body-card>
   </div>
