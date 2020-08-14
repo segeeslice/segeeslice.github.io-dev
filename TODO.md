@@ -8,10 +8,10 @@
         - ~~Contact info~~ *(See below)*
         - ~~Work experience~~
         - ~~Activities~~
-    - Update profile picture
-    - Update resume link
-    - Add snake project (+ remove others?)
-        - Add snake portfolio!
+    - ~~Update profile picture~~
+    - ~~Update resume link~~
+    - ~~Add snake project (+ remove others?)~~
+        - ~~Add snake portfolio!~~
     - Add social media links via icons to contact info
 
 - **Background/scrolling overhaul**
@@ -35,6 +35,9 @@
     - Combine `body-card` and `body-card-image` with common slots
     - Refactor button row to use relative positioning and padding?
     - Rename work experience things
+
+- **Style/QOL**
+    - Update links to open in new tab (`target="_blank"`)
 
 - **Updates**
     - Update Vue if necessary

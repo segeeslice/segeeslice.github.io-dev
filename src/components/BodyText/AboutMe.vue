@@ -61,7 +61,7 @@ export default {
   components: { BodyCard, BodyCardImage, DownloadButton },
   data () {
     return {
-      portrait: require('@/assets/Dustin-Seger-Portrait.jpg'),
+      portrait: require('@/assets/Dustin-Seger-Portrait.png'),
       resumeFile: require('@/../public/Dustin-Seger-Resume.pdf')
     }
   }
