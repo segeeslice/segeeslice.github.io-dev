@@ -44,9 +44,17 @@
         Germany in August 2020. <b>Full-time job opportunities are welcome</b>
         following my graduation in May 2021.
       </p>
-      <download-button :file="resumeFile">
-        Download My Resume
-      </download-button>
+
+      <v-layout row align-center>
+        <download-button :file="resumeFile">
+          Download My Resume
+        </download-button>
+        <a href="https://www.linkedin.com/in/dustin-seger-19972016/">
+          <v-btn icon outline dark>
+            <img :src="linkedinLogo" class="pa-1"/>
+          </v-btn>
+        </a>
+      </v-layout>
     </body-card>
   </div>
 </template>
@@ -62,7 +70,8 @@ export default {
   data () {
     return {
       portrait: require('@/assets/Dustin-Seger-Portrait.png'),
-      resumeFile: require('@/../public/Dustin-Seger-Resume.pdf')
+      resumeFile: require('@/../public/Dustin-Seger-Resume.pdf'),
+      linkedinLogo: require('@/assets/linkedin-logo.png')
     }
   }
 }
