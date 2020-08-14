@@ -9,6 +9,7 @@
       <!-- Landing area -->
       <v-flex xs12>
         <v-card id="top" flat :class="['faded', 'text-xs-center']" height="100vh">
+          <!-- TODO: Better vertically justify -->
           <div class="white-text" style="padding-top:40vh;">
             <h1>Dustin Seger</h1>
             <h3>Computer science student</h3>
@@ -16,94 +17,41 @@
         </v-card>
       </v-flex>
 
-      <!-- Temporary warning until release -->
-      <!-- TODO: Remove once TODO is exhausted -->
-
-      <body-card v-if="showAlert">
-        <v-alert height="400px" outline v-model="showAlert" dismissible type="warning">
-          <p>
-            This site info is not up-to-date! I've done a lot of cool things since the last
-            update here over a year ago, and I'm working hard to get this fixed up as soon
-            as possible. In the meantime, check out my
-            <a href="https://www.linkedin.com/in/dustin-seger-19972016/">LinkedIn</a>
-            for more recent info.
-          </p>
-          <p>
-            - Dustin Seger
-          </p>
-        </v-alert>
-      </body-card>
-
       <!-- About me -->
-      <body-card-image id="about" :body="aboutMe" :img="portrait" position="right" :spaces="3"/>
-      <download-button :file="resumeLocation"/>
+      <about-me id="about"/>
 
       <!-- Contact info -->
-      <body-card id="contact">
-        <contact-info/>
-      </body-card>
+      <contact-info id="contact"/>
 
       <!-- Work experience -->
-      <div id="work">
-        <body-card>
-          <we1/>
-        </body-card>
-        <body-card-image :body="workExperience2" :img="crownHQ" position="left" :spaces="0"/>
-        <body-card>
-          <we3/>
-        </body-card>
-        <body-card-image :body="workExperience4" :img="truck" position="right" :spaces="0"/>
-        <body-card>
-          <we5/>
-        </body-card>
-      </div>
+      <work-experience id="work"/>
 
       <!-- Activities -->
-      <body-card id="activities">
-        <activities/>
-      </body-card>
+      <activities id="activities"/>
     </v-layout>
   </div>
   <!--TODO: Footer?-->
 </template>
 
 <script>
-import ButtonScrollColumn from './components/ButtonScrollColumn.vue'
-import BodyCard from './components/BodyCard.vue'
-import BodyCardImage from './components/BodyCardImage.vue'
-import DownloadButton from './components/DownloadButton.vue'
+import ButtonScrollColumn from './components/ButtonScrollColumn'
 
-import AboutMe from './components/body-text/AboutMe.vue'
-import ContactInfo from './components/body-text/ContactInfo.vue'
-import Activities from './components/body-text/Activities.vue'
-
-import WE1 from './components/body-text/WorkExperience/WE1.vue'
-import WE2 from './components/body-text/WorkExperience/WE2.vue'
-import WE3 from './components/body-text/WorkExperience/WE3.vue'
-import WE4 from './components/body-text/WorkExperience/WE4.vue'
-import WE5 from './components/body-text/WorkExperience/WE5.vue'
-
-import resume from '../public/Dustin-Seger-Resume.pdf'
+import AboutMe from './components/BodyText/AboutMe'
+import ContactInfo from './components/BodyText/ContactInfo'
+import Activities from './components/BodyText/Activities'
+import WorkExperience from './components/BodyText/WorkExperience'
 
 export default {
   name: 'app',
   components: {
-    ButtonScrollColumn,
-    BodyCard,
-    DownloadButton,
-    BodyCardImage,
     AboutMe,
-    ContactInfo,
     Activities,
-    'we1': WE1,
-    'we2': WE2,
-    'we3': WE3,
-    'we4': WE4,
-    'we5': WE5
+    ButtonScrollColumn,
+    ContactInfo,
+    WorkExperience
   },
   data () {
     return {
-      showAlert: true, // TODO: remove after release
       // Style details
       baseStyle: {
         backgroundRepeat: 'no-repeat',
@@ -133,12 +81,6 @@ export default {
         { id: 'activities', icon: 'person', tip: 'Personal activities' }
       ],
 
-      // Other assets
-      resumeLocation: resume,
-      portrait: require('@/assets/Dustin-Seger-Portrait.jpg'),
-      crownHQ: require('@/assets/crown-hq.jpg'),
-      truck: require('@/assets/sp-truck.png'),
-
       // Scroll behavior assets
       windowHeight: window.innerHeight,
       lastScroll: { pageY: 0 }
@@ -159,16 +101,6 @@ export default {
     dynamicBackground () {
       return Object.assign(this.baseStyle, { backgroundImage: 'url(' + require(`${this.backgrounds[this.backgroundIndex]}`) + ')' })
     },
-
-    // Computed components required for passing as prop
-    aboutMe () { return AboutMe },
-    contactInfo () { return ContactInfo },
-    activities () { return Activities },
-    workExperience1 () { return WE1 },
-    workExperience2 () { return WE2 },
-    workExperience3 () { return WE3 },
-    workExperience4 () { return WE4 },
-    workExperience5 () { return WE5 }
   },
   methods: {
     onScroll (val) {
@@ -229,8 +161,10 @@ h3 {
 }
 p {
   font-size: 18px;
+  font-weight: 350;
 }
 a {
   color: white;
+  font-weight: 500;
 }
 </style>
