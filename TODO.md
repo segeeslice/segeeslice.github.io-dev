@@ -2,8 +2,9 @@
 
 *Sorted by order of importance*
 
-- **Content overhaul**
-    - Update text portions
+## v2.0.0
+- **Content overhaul***
+    - ~~Update text portions~~
         - ~~About me~~
         - ~~Contact info~~ *(See below)*
         - ~~Work experience~~
@@ -14,6 +15,7 @@
         - ~~Add snake portfolio!~~
     - ~~Add social media links via icons to contact info~~
 
+## v2.x.x
 - **Background/scrolling overhaul**
     1. ~~Fix scrolling to use `v-scrollto` with animations~~
     1. Tie backgrounds to top of next area instead of randomly

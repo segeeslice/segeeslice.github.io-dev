@@ -17,26 +17,6 @@
         </v-card>
       </v-flex>
 
-      <!-- Temporary warning until release -->
-      <!-- TODO: Remove once TODO.md is exhausted -->
-
-      <alert
-        dismissible
-        :show="showAlert"
-        @dismissed="showAlert = false"
-      >
-        <p>
-          This site info is not up-to-date! I've done a lot of cool things since the last
-          update here over a year ago, and I'm working hard to get this fixed up as soon
-          as possible. In the meantime, check out my
-          <a href="https://www.linkedin.com/in/dustin-seger-19972016/">LinkedIn</a>
-          for more recent info.
-        </p>
-        <p>
-          - Dustin Seger
-        </p>
-      </alert>
-
       <!-- About me -->
       <about-me id="about"/>
 
@@ -54,7 +34,6 @@
 </template>
 
 <script>
-import Alert from './components/Alert'
 import ButtonScrollColumn from './components/ButtonScrollColumn'
 
 import AboutMe from './components/BodyText/AboutMe'
@@ -67,14 +46,12 @@ export default {
   components: {
     AboutMe,
     Activities,
-    Alert,
     ButtonScrollColumn,
     ContactInfo,
     WorkExperience
   },
   data () {
     return {
-      showAlert: true, // TODO: remove after release
       // Style details
       baseStyle: {
         backgroundRepeat: 'no-repeat',
