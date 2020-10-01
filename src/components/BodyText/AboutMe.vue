@@ -51,7 +51,7 @@
         </download-button>
         <a href="https://www.linkedin.com/in/dustin-seger-19972016/">
           <v-btn icon outline dark>
-            <img :src="linkedinLogo" class="pa-1"/>
+            <v-img :src="linkedinLogo" class="ma-1"/>
           </v-btn>
         </a>
       </v-layout>
