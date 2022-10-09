@@ -12,7 +12,7 @@
           <!-- TODO: Better vertically justify -->
           <div class="white-text" style="padding-top:40vh;">
             <h1>Dustin Seger</h1>
-            <h3>Computer science student</h3>
+            <h3>Software Engineer</h3>
           </div>
         </v-card>
       </v-flex>
@@ -66,10 +66,10 @@ export default {
 
       scrollItems: [
         { id: 'top', icon: 'arrow_upward', tip: 'Top' },
-        { id: 'about', icon: 'info', tip: 'About me' },
-        { id: 'contact', icon: 'contact_mail', tip: 'Contact info' },
-        { id: 'work', icon: 'work', tip: 'Work experience' },
-        { id: 'activities', icon: 'person', tip: 'Personal activities' }
+        { id: 'about', icon: 'info', tip: 'About Me' },
+        { id: 'contact', icon: 'contact_mail', tip: 'Contact Info' },
+        { id: 'work', icon: 'work', tip: 'Work Experience' },
+        { id: 'activities', icon: 'person', tip: 'Personal Activities' }
       ],
 
       // Scroll behavior assets
