@@ -17,16 +17,9 @@
         </v-card>
       </v-flex>
 
-      <!-- About me -->
       <about-me id="about"/>
-
-      <!-- Contact info -->
       <contact-info id="contact"/>
-
-      <!-- Work experience -->
       <work-experience id="work"/>
-
-      <!-- Activities -->
       <activities id="activities"/>
     </v-layout>
   </div>
@@ -52,7 +45,6 @@ export default {
   },
   data () {
     return {
-      // Style details
       baseStyle: {
         backgroundRepeat: 'no-repeat',
         backgroundAttachment: 'fixed',
@@ -72,7 +64,6 @@ export default {
       ],
       backgroundIndex: 0,
 
-      // Scroll link items
       scrollItems: [
         { id: 'top', icon: 'arrow_upward', tip: 'Top' },
         { id: 'about', icon: 'info', tip: 'About me' },
@@ -129,7 +120,6 @@ export default {
       this.baseStyle.opacity = val
     },
     changeBackground (index) {
-      // Roll back index if over the length
       this.backgroundIndex = index % this.backgrounds.length
     }
   }
