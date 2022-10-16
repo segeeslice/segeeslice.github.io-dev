@@ -163,6 +163,14 @@ p {
   font-size: 18px;
   font-weight: 350;
 }
+div {
+  font-size: 18px;
+  font-weight: 350;
+}
+span {
+  font-size: 18px;
+  font-weight: 350;
+}
 a {
   color: white;
   font-weight: 500;
