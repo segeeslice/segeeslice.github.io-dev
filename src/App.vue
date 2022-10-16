@@ -17,6 +17,19 @@
         </v-card>
       </v-flex>
 
+      <alert
+        dismissible
+        :show="showAlert"
+        @dismissed="showAlert = false"
+      >
+        <div>
+          This site info is not up-to-date! I'm working hard to get this updated
+          as soon as possible. In the meantime, check out my <a
+          href="https://www.linkedin.com/in/dustin-seger-19972016/">LinkedIn</a>
+          for more recent info.
+        </div>
+      </alert>
+
       <!-- About me -->
       <about-me id="about"/>
 
@@ -34,6 +47,7 @@
 </template>
 
 <script>
+import Alert from './components/Alert'
 import ButtonScrollColumn from './components/ButtonScrollColumn'
 
 import AboutMe from './components/BodyText/AboutMe'
@@ -46,12 +60,14 @@ export default {
   components: {
     AboutMe,
     Activities,
+    Alert,
     ButtonScrollColumn,
     ContactInfo,
     WorkExperience
   },
   data () {
     return {
+      showAlert: true, // TODO: Remove for 3.0 release
       // Style details
       baseStyle: {
         backgroundRepeat: 'no-repeat',
