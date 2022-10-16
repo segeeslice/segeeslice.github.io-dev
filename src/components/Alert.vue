@@ -1,16 +1,17 @@
 <template>
-  <!-- TODO: exit transition -->
-  <body-card v-if="show">
-    <v-alert
-      outline
-      type="warning"
-      :value="show"
-      :dismissible="dismissible"
-      @input="$emit('dismissed')"
-    >
-      <slot/>
-    </v-alert>
-  </body-card>
+  <v-expand-transition>
+    <body-card v-if="show">
+      <v-alert
+        outline
+        type="warning"
+        :value="show"
+        :dismissible="dismissible"
+        @input="$emit('dismissed')"
+      >
+        <slot/>
+      </v-alert>
+    </body-card>
+  </v-expand-transition>
 </template>
 
 <script>
